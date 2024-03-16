@@ -36,7 +36,7 @@ class FFBottomBarState extends State<FFBottomBar> {
                   SvgPicture.asset(
                     'assets/icons/training_icon.svg',
                     color: isActive == 0 ? null : FFColors.grey555555,
-                    width: 25.80.w,
+                    width: 26.88.w,
                   ),
                   SizedBox(height: 6.h),
                   Text(
@@ -61,7 +61,7 @@ class FFBottomBarState extends State<FFBottomBar> {
                   SvgPicture.asset(
                     'assets/icons/food_icon.svg',
                     color: isActive == 1 ? null : FFColors.grey555555,
-                    width: 25.80.w,
+                    width: 26.88.w,
                   ),
                   SizedBox(height: 6.h),
                   Text(
@@ -86,7 +86,7 @@ class FFBottomBarState extends State<FFBottomBar> {
                   SvgPicture.asset(
                     'assets/icons/reminders_icon.svg',
                     color: isActive == 2 ? null : FFColors.grey555555,
-                    width: 25.50.w,
+                    width: 26.88.w,
                   ),
                   SizedBox(height: 6.h),
                   Text(
@@ -111,7 +111,7 @@ class FFBottomBarState extends State<FFBottomBar> {
                   SvgPicture.asset(
                     'assets/icons/settings_icon.svg',
                     color: isActive == 3 ? null : FFColors.grey555555,
-                    width: 27.w,
+                    width: 26.88.w,
                   ),
                   SizedBox(height: 6.h),
                   Text(
