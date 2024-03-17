@@ -1,3 +1,4 @@
+import 'package:familyforge_fitness_130/premium/premium_screen.dart';
 import 'package:familyforge_fitness_130/settings/widget/settings_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,7 +27,16 @@ class SettingsScreen extends StatelessWidget {
             SettingsItemWidget(
               imagSvg: 'assets/icons/premium_icon.svg',
               text: 'Get Premium',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const PremiumScreen(
+                      isClose: true,
+                    ),
+                  ),
+                );
+              },
               isIcon: false,
             ),
             SizedBox(height: 10.h),
