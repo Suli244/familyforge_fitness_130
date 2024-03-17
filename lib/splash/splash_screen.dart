@@ -1,5 +1,5 @@
-import 'package:familyforge_fitness_130/core/con_bar.dart';
 import 'package:familyforge_fitness_130/core/ff_colors.dart';
+import 'package:familyforge_fitness_130/onbording/onbording.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -42,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => const FFBottomBar(),
+        builder: (context) => const Onbording(),
       ),
     );
   }

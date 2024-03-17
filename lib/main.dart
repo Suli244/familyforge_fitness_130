@@ -41,7 +41,8 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'FamilyForge Fitness',
           home: child,
-          theme: ThemeData.light().copyWith(
+          theme: ThemeData(
+            fontFamily: 'SFProDisplay',
             splashColor: Colors.transparent,
             splashFactory: NoSplash.splashFactory,
             highlightColor: Colors.transparent,

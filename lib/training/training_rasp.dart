@@ -23,6 +23,77 @@ class Rasp {
       required this.step3});
 }
 
+class ForVideo {
+  final String ytbUrl;
+  final String image;
+  final String title;
+
+  ForVideo({required this.ytbUrl, required this.image, required this.title});
+}
+
+List<ForVideo> listVideo = [
+  ForVideo(
+    ytbUrl: 'https://www.youtube.com/watch?v=FB5-7tIiX-I',
+    image: 'assets/images/for1.png',
+    title: '12 Easy Exercises For Kids At Home',
+  ),
+  ForVideo(
+    ytbUrl: 'https://www.youtube.com/watch?v=aYtyYr_O5zk',
+    image: 'assets/images/for2.png',
+    title: 'Add Core Exercises to Children’s Workout Routine',
+  ),
+  ForVideo(
+    ytbUrl: 'https://www.youtube.com/watch?v=aYtyYr_O5zk',
+    image: 'assets/images/for3.png',
+    title: '5 Exercises To Keep Little Ones Active Without Leaving Home',
+  ),
+  ForVideo(
+    ytbUrl: 'https://www.youtube.com/watch?v=LJqCHZsGe3M',
+    image: 'assets/images/for4.png',
+    title: 'FULL BODY WORKOUT FOR KIDS: EXERCISE AT HOME',
+  ),
+  ForVideo(
+    ytbUrl: 'https://www.youtube.com/watch?v=VMPIzKUtUAU',
+    image: 'assets/images/for5.png',
+    title: 'FULL BODY WORKOUT FOR KIDS: EXERCISE AT HOME',
+  ),
+  ForVideo(
+    ytbUrl: 'https://www.youtube.com/watch?v=y5U2KFCpWzc',
+    image: 'assets/images/for6.png',
+    title: 'KID-FRIENDLY FULL BODY FAT BURN - FUN EXERCISE SESSION',
+  ),
+  ForVideo(
+    ytbUrl: 'https://www.youtube.com/watch?v=-s5-CipfaAE',
+    image: 'assets/images/for7.png',
+    title: 'GENTLE CORE WORKOUT FOR KIDS - SIMPLE AND LOW-IMPACT ROUTINE',
+  ),
+  ForVideo(
+    ytbUrl: 'https://www.youtube.com/watch?v=dvzAW8Zj5F4',
+    image: 'assets/images/for8.png',
+    title: '7 SIMPLE EXERCISES TO IMPROVE MOBILITY AND FLEXIBILITY',
+  ),
+  ForVideo(
+    ytbUrl: 'https://www.youtube.com/watch?v=pivSDkqagn0',
+    image: 'assets/images/for9.png',
+    title: '9 FITNESS EXERCISES FOR KIDS',
+  ),
+  ForVideo(
+    ytbUrl: 'https://www.youtube.com/watch?v=01RGhrUQwVs',
+    image: 'assets/images/for10.png',
+    title: 'TOP 5 STANDING EXERCISES FOR BEGINNERS',
+  ),
+  ForVideo(
+    ytbUrl: 'https://www.youtube.com/watch?v=htCDXZIp-UI',
+    image: 'assets/images/for11.png',
+    title: 'CORE Exercises For KIDS & PRETEENAGERS: Have More ENERGY',
+  ),
+  ForVideo(
+    ytbUrl: 'https://www.youtube.com/watch?v=4k-2Gy-9YuE',
+    image: 'assets/images/for12.png',
+    title: 'CHILDRENS FITNESS EXERCISE TO GROW MORE AND MORE',
+  ),
+];
+
 List<Rasp> listTraining = [
   Rasp(
     image: 'https://i.ibb.co/xHSbKCK/exercise1.png',
