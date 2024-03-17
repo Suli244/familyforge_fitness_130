@@ -9,7 +9,7 @@ part 'get_reminders_cubit.freezed.dart';
 class GetRemindersCubit extends Cubit<GetRemindersState> {
   GetRemindersCubit(this.repo) : super(const GetRemindersState.loading());
 
-  final Pouvbsd repo;
+  final RepossImpl repo;
 
   getReminders() async {
     emit(const GetRemindersState.loading());

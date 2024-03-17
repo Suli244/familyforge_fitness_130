@@ -12,7 +12,7 @@ class SetRemindersCubit extends Cubit<SetRemindersState> {
     this.pouvbsd,
   ) : super(const SetRemindersState.initial());
 
-  final Pouvbsd pouvbsd;
+  final RepossImpl pouvbsd;
 
   setReminders(RemindersHiveModel remindersHiveModel) async {
     emit(const SetRemindersState.loading());

@@ -1,7 +1,10 @@
 import 'package:familyforge_fitness_130/core/ff_colors.dart';
 import 'package:familyforge_fitness_130/reminders/logic/cubits/get_reminders_cubit/get_reminders_cubit.dart';
+import 'package:familyforge_fitness_130/reminders/logic/cubits/todo_get_cubit/todo_get_cubit.dart';
 import 'package:familyforge_fitness_130/reminders/logic/model/reminders_hive_model.dart';
+import 'package:familyforge_fitness_130/reminders/logic/model/todo_hive_model.dart';
 import 'package:familyforge_fitness_130/reminders/logic/repositories/reminders_repo.dart';
+import 'package:familyforge_fitness_130/reminders/logic/repositories/todo_repo.dart';
 import 'package:familyforge_fitness_130/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -12,6 +15,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
   Hive.registerAdapter(RemindersHiveModelAdapter());
+  Hive.registerAdapter(TodoHiveModelAdapter());
   runApp(const MyApp());
 }
 
@@ -20,8 +24,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => GetRemindersCubit(PouvbsdImpl()),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => GetRemindersCubit(RepossImpl()),
+        ),
+        BlocProvider(
+          create: (context) => GetTodoCubit(TodoRepoImpl()),
+        ),
+      ],
       child: ScreenUtilInit(
         designSize: const Size(375, 812),
         minTextAdapt: true,

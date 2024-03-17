@@ -1,21 +1,24 @@
 import 'package:familyforge_fitness_130/core/FF_motin.dart';
 import 'package:familyforge_fitness_130/core/ff_colors.dart';
 import 'package:familyforge_fitness_130/reminders/logic/cubits/set_reminders_cubit/set_reminders_cubit.dart';
+import 'package:familyforge_fitness_130/reminders/logic/cubits/todo_set_cubit/todo_set_cubit.dart';
 import 'package:familyforge_fitness_130/reminders/logic/model/reminders_hive_model.dart';
+import 'package:familyforge_fitness_130/reminders/logic/model/todo_hive_model.dart';
 import 'package:familyforge_fitness_130/reminders/logic/repositories/reminders_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class AddReminders extends StatefulWidget {
-  const AddReminders({super.key, required this.datee});
-  // final ValueChanged model;
-  final DateTime datee;
+class AddNote extends StatefulWidget {
+  const AddNote({
+    super.key,
+  });
+
   @override
-  State<AddReminders> createState() => _AddRemindersState();
+  State<AddNote> createState() => _AddNoteState();
 }
 
-class _AddRemindersState extends State<AddReminders> {
+class _AddNoteState extends State<AddNote> {
   TextEditingController controller = TextEditingController();
 
   @override
@@ -62,7 +65,7 @@ class _AddRemindersState extends State<AddReminders> {
                     fontWeight: FontWeight.w700,
                   ),
                   decoration: InputDecoration(
-                    hintText: 'Training Name',
+                    hintText: 'Note Name',
                     hintStyle: TextStyle(
                       color: FFColors.grey555555,
                       fontSize: 28.h,
@@ -117,15 +120,14 @@ class _AddRemindersState extends State<AddReminders> {
                           return FFMotion(
                             onPressed: () {
                               if (controller.text.isNotEmpty) {
-                                RemindersHiveModel remindersHiveModel =
-                                    RemindersHiveModel(
-                                        id: '${DateTime.now().millisecondsSinceEpoch}',
-                                        name: controller.text,
-                                        dateTime: widget.datee,
-                                        color: FFColors.redE80000.value);
+                                TodoHiveModel todoHiveModel = TodoHiveModel(
+                                  id: DateTime.now().millisecondsSinceEpoch,
+                                  name: controller.text,
+                                  isActive: false,
+                                );
                                 context
-                                    .read<SetRemindersCubit>()
-                                    .setReminders(remindersHiveModel);
+                                    .read<SetTodoCubit>()
+                                    .setTodo(todoHiveModel);
                               }
                             },
                             child: Container(
@@ -145,7 +147,7 @@ class _AddRemindersState extends State<AddReminders> {
                                   ),
                                   SizedBox(width: 7.w),
                                   Text(
-                                    'Add train',
+                                    'Add note',
                                     style: TextStyle(
                                       color: FFColors.redE80000,
                                       fontSize: 16.h,
