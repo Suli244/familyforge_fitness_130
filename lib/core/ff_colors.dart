@@ -8,7 +8,6 @@ abstract class FFColors {
   static const Color black222222 = Color(0xff222222);
   static const Color black202020 = Color(0xff202020);
   static const Color blackBt = Color(0xff151515);
-  static const Color black222222 = Color(0xff222222);
   static const Color grey555555 = Color(0xff555555);
   static const Color grey636366 = Color(0xff636366);
   static const Color grey28282b = Color(0xff28282b);
