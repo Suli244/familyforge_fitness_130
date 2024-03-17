@@ -30,7 +30,7 @@ class FoodSceen extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 37.h,
+                height: 32.h,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
