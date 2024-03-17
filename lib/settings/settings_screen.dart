@@ -1,5 +1,7 @@
+import 'package:familyforge_fitness_130/settings/widget/settings_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:share_plus/share_plus.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -17,10 +19,44 @@ class SettingsScreen extends StatelessWidget {
         ),
         centerTitle: false,
       ),
-      body: Column(
-        children: [
-          Container(),
-        ],
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
+        child: Column(
+          children: [
+            SettingsItemWidget(
+              imagSvg: 'assets/icons/premium_icon.svg',
+              text: 'Get Premium',
+              onPressed: () {},
+              isIcon: false,
+            ),
+            SizedBox(height: 10.h),
+            SettingsItemWidget(
+              imagSvg: 'assets/icons/lock_icon.svg',
+              text: 'Privacy Policy',
+              onPressed: () {},
+            ),
+            SizedBox(height: 10.h),
+            SettingsItemWidget(
+              imagSvg: 'assets/icons/list_icon.svg',
+              text: 'Terms of Use',
+              onPressed: () {},
+            ),
+            SizedBox(height: 10.h),
+            SettingsItemWidget(
+              imagSvg: 'assets/icons/navu_icon.svg',
+              text: 'Support',
+              onPressed: () {},
+            ),
+            SizedBox(height: 10.h),
+            SettingsItemWidget(
+              imagSvg: 'assets/icons/shap_icon.svg',
+              text: 'Share App',
+              onPressed: () {
+                Share.share('Hello');
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
