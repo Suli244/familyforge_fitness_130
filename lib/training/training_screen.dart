@@ -1,3 +1,4 @@
+import 'package:familyforge_fitness_130/core/ff_colors.dart';
 import 'package:familyforge_fitness_130/core/ff_motin.dart';
 import 'package:familyforge_fitness_130/training/training_rasp.dart';
 import 'package:familyforge_fitness_130/training/widgets/for_widget.dart';
@@ -29,84 +30,54 @@ class _TrainingScreenState extends State<TrainingScreen> {
         ),
         centerTitle: false,
       ),
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.r),
-        child: Column(
-          children: [
-            Container(
-              padding: const EdgeInsets.all(2),
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                color: const Color(0xff767680).withOpacity(0.24),
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: FFMotion(
-                      onPressed: () {
-                        setState(() {
-                          page = 'For Parents';
-                        });
-                      },
-                      child: Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 28.h,
-                        decoration: BoxDecoration(
-                          color: page == 'For Parents'
-                              ? const Color(0xff636366)
-                              : null,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Center(
-                          child: Text(
-                            'For Parents',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 12.h,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                      ),
+      body: DefaultTabController(
+        length: 2,
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
+          child: Column(
+            children: [
+              Container(
+                height: 32.h,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: FFColors.grey28282b,
+                ),
+                child: TabBar(
+                  indicatorSize: TabBarIndicatorSize.tab,
+                  dividerColor: FFColors.black1,
+                  labelColor: Colors.white,
+                  labelStyle: TextStyle(
+                    fontSize: 12.h,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  unselectedLabelColor: Colors.white,
+                  unselectedLabelStyle: TextStyle(
+                    fontSize: 12.h,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  indicator: BoxDecoration(
+                    color: FFColors.grey636366,
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(
+                      color: FFColors.grey28282b,
+                      width: 3,
                     ),
                   ),
-                  Expanded(
-                    child: FFMotion(
-                      onPressed: () {
-                        setState(() {
-                          page = 'For Kids';
-                        });
-                      },
-                      child: Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 28.h,
-                        decoration: BoxDecoration(
-                          color: page == 'For Kids'
-                              ? const Color(0xff636366)
-                              : null,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Center(
-                          child: Text(
-                            'For Kids',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 12.h,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                      ),
+                  tabs: const [
+                    Tab(
+                      text: 'For Parents',
                     ),
-                  )
-                ],
+                    Tab(
+                      text: 'For Kids',
+                    ),
+                  ],
+                ),
               ),
-            ),
-            SizedBox(height: 6.h),
-            page == 'For Parents'
-                ? Expanded(
-                    child: ListView.separated(
+              Expanded(
+                child: TabBarView(
+                  children: [
+                    ListView.separated(
                       padding: EdgeInsets.symmetric(vertical: 10.r),
                       shrinkWrap: true,
                       itemCount: listTraining.length,
@@ -117,9 +88,7 @@ class _TrainingScreenState extends State<TrainingScreen> {
                         index: index + 1,
                       ),
                     ),
-                  )
-                : Expanded(
-                    child: ListView.separated(
+                    ListView.separated(
                       padding: EdgeInsets.symmetric(vertical: 10.r),
                       shrinkWrap: true,
                       itemCount: listVideo.length,
@@ -129,10 +98,117 @@ class _TrainingScreenState extends State<TrainingScreen> {
                         model: listVideo[index],
                       ),
                     ),
-                  ),
-          ],
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
+      //  Padding(
+      //   padding: EdgeInsets.symmetric(horizontal: 20.r),
+      //   child: Column(
+      //     children: [
+      //       Container(
+      //         padding: const EdgeInsets.all(2),
+      //         width: MediaQuery.of(context).size.width,
+      //         decoration: BoxDecoration(
+      //           color: const Color(0xff767680).withOpacity(0.24),
+      //           borderRadius: BorderRadius.circular(8),
+      //         ),
+      //         child: Row(
+      //           children: [
+      //             Expanded(
+      //               child: FFMotion(
+      //                 onPressed: () {
+      //                   setState(() {
+      //                     page = 'For Parents';
+      //                   });
+      //                 },
+      //                 child: Container(
+      //                   width: MediaQuery.of(context).size.width,
+      //                   height: 28.h,
+      //                   decoration: BoxDecoration(
+      //                     color: page == 'For Parents'
+      //                         ? const Color(0xff636366)
+      //                         : null,
+      //                     borderRadius: BorderRadius.circular(8),
+      //                   ),
+      //                   child: Center(
+      //                     child: Text(
+      //                       'For Parents',
+      //                       style: TextStyle(
+      //                         color: Colors.white,
+      //                         fontSize: 12.h,
+      //                         fontWeight: FontWeight.w600,
+      //                       ),
+      //                     ),
+      //                   ),
+      //                 ),
+      //               ),
+      //             ),
+      //             Expanded(
+      //               child: FFMotion(
+      //                 onPressed: () {
+      //                   setState(() {
+      //                     page = 'For Kids';
+      //                   });
+      //                 },
+      //                 child: Container(
+      //                   width: MediaQuery.of(context).size.width,
+      //                   height: 28.h,
+      //                   decoration: BoxDecoration(
+      //                     color: page == 'For Kids'
+      //                         ? const Color(0xff636366)
+      //                         : null,
+      //                     borderRadius: BorderRadius.circular(8),
+      //                   ),
+      //                   child: Center(
+      //                     child: Text(
+      //                       'For Kids',
+      //                       style: TextStyle(
+      //                         color: Colors.white,
+      //                         fontSize: 12.h,
+      //                         fontWeight: FontWeight.w600,
+      //                       ),
+      //                     ),
+      //                   ),
+      //                 ),
+      //               ),
+      //             )
+      //           ],
+      //         ),
+      //       ),
+      //       SizedBox(height: 6.h),
+      //       page == 'For Parents'
+      //           ? Expanded(
+      //               child: ListView.separated(
+      //                 padding: EdgeInsets.symmetric(vertical: 10.r),
+      //                 shrinkWrap: true,
+      //                 itemCount: listTraining.length,
+      //                 separatorBuilder: (context, index) =>
+      //                     const SizedBox(height: 12),
+      //                 itemBuilder: (context, index) => TrainWidget(
+      //                   model: listTraining[index],
+      //                   index: index + 1,
+      //                 ),
+      //               ),
+      //             )
+      //           : Expanded(
+      //               child: ListView.separated(
+      //                 padding: EdgeInsets.symmetric(vertical: 10.r),
+      //                 shrinkWrap: true,
+      //                 itemCount: listVideo.length,
+      //                 separatorBuilder: (context, index) =>
+      //                     const SizedBox(height: 12),
+      //                 itemBuilder: (context, index) => ForWidget(
+      //                   model: listVideo[index],
+      //                 ),
+      //               ),
+      //             ),
+      //     ],
+      //   ),
+      // ),
     );
   }
 }

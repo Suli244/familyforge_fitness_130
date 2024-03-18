@@ -43,11 +43,13 @@ class TrainWidget extends StatelessWidget {
                   child: CachedNetworkImage(
                     imageUrl: model.image,
                     width: MediaQuery.of(context).size.width,
+                    height: 160.h,
                     fit: BoxFit.cover,
                     placeholder: (context, url) => ClipRRect(
                       borderRadius: BorderRadius.circular(12),
                       child: SizedBox(
                         width: MediaQuery.of(context).size.width,
+                        height: 160.h,
                         child: Shimmer.fromColors(
                           baseColor: Colors.grey.shade500,
                           highlightColor: Colors.grey.shade200,
