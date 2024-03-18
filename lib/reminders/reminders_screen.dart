@@ -674,7 +674,6 @@ class _RemindersScreenState extends State<RemindersScreen> {
                   return const AddNote();
                 },
               );
-              print('1111');
               context.read<GetTodoCubit>().getTodo();
             },
             child: Container(
