@@ -1,4 +1,3 @@
-import 'package:familyforge_fitness_130/reminders/logic/model/reminders_hive_model.dart';
 import 'package:familyforge_fitness_130/reminders/logic/repositories/reminders_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
