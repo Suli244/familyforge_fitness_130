@@ -1,8 +1,15 @@
+import 'dart:developer';
+
 import 'package:familyforge_fitness_130/core/con_bar.dart';
 import 'package:familyforge_fitness_130/core/ff_colors.dart';
 import 'package:familyforge_fitness_130/core/ff_motin.dart';
+import 'package:familyforge_fitness_130/core/urls.dart';
+import 'package:familyforge_fitness_130/core/web_view_plink.dart';
 import 'package:familyforge_fitness_130/premium/widget/premium_item_widget.dart';
 import 'package:familyforge_fitness_130/premium/widget/restore_widgets.dart';
+import 'package:familyforge_fitness_130/settings/familyforge_fitness_adadpad.dart';
+import 'package:familyforge_fitness_130/settings/familyforge_fitness_prenv.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,6 +21,20 @@ class PremiumScreen extends StatefulWidget {
 }
 
 class _PremiumScreenState extends State<PremiumScreen> {
+  Future<void> familyforgeFitnessPurchase() async {
+    final familyforgeFitnessPaywall = await FamilyforgeFitnessAdapty()
+        .familyforgeFitnessGetPaywall(DocFF.sndsdsdwq);
+    if (familyforgeFitnessPaywall == null) return;
+    final familyforgeFitnessProducts = await FamilyforgeFitnessAdapty()
+        .familyforgeFitnessGetPaywallProducts(familyforgeFitnessPaywall);
+    if (familyforgeFitnessProducts == null) return;
+    if (kDebugMode) log('FamilyforgeFitness');
+
+    await FamilyforgeFitnessAdapty()
+        .familyforgeFitnessMakePurchase(familyforgeFitnessProducts.first);
+  }
+
+  bool trbbbdb = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +69,9 @@ class _PremiumScreenState extends State<PremiumScreen> {
                   ),
                   const Spacer(),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      restoreFamilyforgeFitnessPknqwvm(context);
+                    },
                     child: Text(
                       'Restore purchases',
                       style: TextStyle(
@@ -123,16 +146,24 @@ class _PremiumScreenState extends State<PremiumScreen> {
                     ),
                     SizedBox(height: 30.h),
                     FFMotion(
-                      onPressed: () {
-                        Navigator.pushAndRemoveUntil(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const FFBottomBar(
-                              indexScr: 0,
+                      onPressed: () async {
+                        setState(() => trbbbdb = true);
+                        await familyforgeFitnessPurchase();
+                        final hasPremiumStatusSmartTrader =
+                            await FamilyforgeFitnessAdapty()
+                                .familyforgeFitnessHasPremiumStatus();
+                        if (hasPremiumStatusSmartTrader) {
+                          await setFamilyforgeFitnessPknqwvm();
+                          // ignore: use_build_context_synchronously
+                          Navigator.pushAndRemoveUntil(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const FFBottomBar(),
                             ),
-                          ),
-                          (protected) => false,
-                        );
+                            (route) => false,
+                          );
+                        }
+                        setState(() => trbbbdb = false);
                       },
                       child: Container(
                         decoration: BoxDecoration(
@@ -148,21 +179,46 @@ class _PremiumScreenState extends State<PremiumScreen> {
                             vertical: 20.h,
                             horizontal: 33.w,
                           ),
-                          child: Text(
-                            'Buy Premium \$0.99',
-                            style: TextStyle(
-                              color: FFColors.redE80000,
-                              fontSize: 16.h,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
+                          child: trbbbdb
+                              ? const CircularProgressIndicator(
+                                  valueColor:
+                                      AlwaysStoppedAnimation(Colors.white),
+                                )
+                              : Text(
+                                  'Buy Premium \$0.99',
+                                  style: TextStyle(
+                                    color: FFColors.redE80000,
+                                    fontSize: 16.h,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
                         ),
                       ),
                     ),
                     SizedBox(height: 15.h),
                     RestoreButtons(
-                      onPressTermOfUse: () {},
-                      onPressPrivacyPolicy: () {},
+                      onPressTermOfUse: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const WebFF(
+                              title: 'Terms of Use',
+                              url: DocFF.tUse,
+                            ),
+                          ),
+                        );
+                      },
+                      onPressPrivacyPolicy: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const WebFF(
+                              title: 'Privacy Policy',
+                              url: DocFF.pP,
+                            ),
+                          ),
+                        );
+                      },
                     ),
                     const Spacer(),
                   ],

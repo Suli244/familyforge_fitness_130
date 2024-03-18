@@ -1,4 +1,7 @@
+import 'package:familyforge_fitness_130/core/urls.dart';
+import 'package:familyforge_fitness_130/core/web_view_plink.dart';
 import 'package:familyforge_fitness_130/premium/premium_screen.dart';
+import 'package:familyforge_fitness_130/settings/familyforge_fitness_prenv.dart';
 import 'package:familyforge_fitness_130/settings/widget/settings_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,38 +27,80 @@ class SettingsScreen extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
         child: Column(
           children: [
+            FutureBuilder(
+              future: getFamilyforgeFitnessPknqwvm(),
+              builder: (context, snapshot) {
+                if (snapshot.hasData && !snapshot.data!) {
+                  return Column(
+                    children: [
+                      SettingsItemWidget(
+                        imagSvg: 'assets/icons/premium_icon.svg',
+                        text: 'Get Premium',
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const PremiumScreen(
+                                isClose: true,
+                              ),
+                            ),
+                          );
+                        },
+                        isIcon: false,
+                      ),
+                      SizedBox(height: 10.h),
+                    ],
+                  );
+                }
+                return const SizedBox();
+              },
+            ),
             SettingsItemWidget(
-              imagSvg: 'assets/icons/premium_icon.svg',
-              text: 'Get Premium',
+              imagSvg: 'assets/icons/lock_icon.svg',
+              text: 'Privacy Policy',
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const PremiumScreen(
-                      isClose: true,
+                    builder: (context) => const WebFF(
+                      title: 'Privacy Policy',
+                      url: DocFF.pP,
                     ),
                   ),
                 );
               },
-              isIcon: false,
-            ),
-            SizedBox(height: 10.h),
-            SettingsItemWidget(
-              imagSvg: 'assets/icons/lock_icon.svg',
-              text: 'Privacy Policy',
-              onPressed: () {},
             ),
             SizedBox(height: 10.h),
             SettingsItemWidget(
               imagSvg: 'assets/icons/list_icon.svg',
               text: 'Terms of Use',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const WebFF(
+                      title: 'Terms of Use',
+                      url: DocFF.tUse,
+                    ),
+                  ),
+                );
+              },
             ),
             SizedBox(height: 10.h),
             SettingsItemWidget(
               imagSvg: 'assets/icons/navu_icon.svg',
               text: 'Support',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const WebFF(
+                      title: 'Support',
+                      url: DocFF.s,
+                    ),
+                  ),
+                );
+              },
             ),
             SizedBox(height: 10.h),
             SettingsItemWidget(
