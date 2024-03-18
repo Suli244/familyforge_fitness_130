@@ -1,7 +1,9 @@
 import 'package:familyforge_fitness_130/core/FF_motin.dart';
 import 'package:familyforge_fitness_130/core/ff_colors.dart';
+import 'package:familyforge_fitness_130/reminders/add_note.dart';
 import 'package:familyforge_fitness_130/reminders/add_reminders.dart';
 import 'package:familyforge_fitness_130/reminders/edit_reminders.dart';
+import 'package:familyforge_fitness_130/reminders/history_todo.dart';
 import 'package:familyforge_fitness_130/reminders/logic/cubits/delete_reminders_cubit/delete_reminders_cubit.dart';
 import 'package:familyforge_fitness_130/reminders/logic/cubits/get_reminders_cubit/get_reminders_cubit.dart';
 import 'package:familyforge_fitness_130/reminders/logic/cubits/todo_get_cubit/todo_get_cubit.dart';
@@ -78,7 +80,14 @@ class _RemindersScreenState extends State<RemindersScreen> {
               ? Padding(
                   padding: EdgeInsets.only(right: 20.r),
                   child: FFMotion(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const HistoryTodo(),
+                          ),
+                        );
+                      },
                       child:
                           Image.asset('assets/images/hisss.png', width: 24.w)),
                 )
@@ -624,8 +633,15 @@ class _RemindersScreenState extends State<RemindersScreen> {
                                           const NeverScrollableScrollPhysics(),
                                       shrinkWrap: true,
                                       itemBuilder: (context, index) {
-                                        return TodoWidget(
-                                          model: model[index],
+                                        return Padding(
+                                          padding: EdgeInsets.only(
+                                              top: index == 0 ? 16.r : 0,
+                                              bottom: index == model.length - 1
+                                                  ? 100.r
+                                                  : 0),
+                                          child: TodoWidget(
+                                            model: model[index],
+                                          ),
                                         );
                                       },
                                       separatorBuilder: (_, i) =>
@@ -657,17 +673,24 @@ class _RemindersScreenState extends State<RemindersScreen> {
       ),
       floatingActionButton: _selectedIndex == 1
           ? FFMotion(
-            onPressed: () {
-              
-            },
-            child: Container(
+              onPressed: () async {
+                await showModalBottomSheet(
+                  context: context,
+                  isScrollControlled: true,
+                  builder: (BuildContext context) {
+                    return const AddNote();
+                  },
+                );
+                context.read<GetTodoCubit>().getTodo();
+              },
+              child: Container(
                 height: 56.h,
                 width: 56.w,
                 decoration: const BoxDecoration(
                     shape: BoxShape.circle, color: FFColors.redE80000),
                 child: Icon(Icons.add, color: FFColors.whate, size: 24.r),
               ),
-          )
+            )
           : const SizedBox(),
     );
   }

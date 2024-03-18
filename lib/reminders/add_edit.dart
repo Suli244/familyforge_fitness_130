@@ -2,6 +2,8 @@ import 'package:familyforge_fitness_130/core/FF_motin.dart';
 import 'package:familyforge_fitness_130/core/ff_colors.dart';
 import 'package:familyforge_fitness_130/reminders/logic/cubits/set_reminders_cubit/set_reminders_cubit.dart';
 import 'package:familyforge_fitness_130/reminders/logic/cubits/todo_set_cubit/todo_set_cubit.dart';
+import 'package:familyforge_fitness_130/reminders/logic/cubits/update_todo/update_todo_cubit.dart';
+import 'package:familyforge_fitness_130/reminders/logic/cubits/update_todo_name/update_todo_name_cubit.dart';
 import 'package:familyforge_fitness_130/reminders/logic/model/reminders_hive_model.dart';
 import 'package:familyforge_fitness_130/reminders/logic/model/todo_hive_model.dart';
 import 'package:familyforge_fitness_130/reminders/logic/repositories/reminders_repo.dart';
@@ -10,21 +12,28 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class AddNote extends StatefulWidget {
-  const AddNote({
+class AddEdit extends StatefulWidget {
+  const AddEdit({
     super.key,
+    required this.model,
   });
-
+  final TodoHiveModel model;
   @override
-  State<AddNote> createState() => _AddNoteState();
+  State<AddEdit> createState() => _AddEditState();
 }
 
-class _AddNoteState extends State<AddNote> {
-  TextEditingController controller = TextEditingController();
+class _AddEditState extends State<AddEdit> {
+  late TextEditingController _controller;
+
+  @override
+  void initState() {
+    _controller = TextEditingController(text: widget.model.name);
+    super.initState();
+  }
 
   @override
   void dispose() {
-    controller.dispose();
+    _controller.dispose();
     super.dispose();
   }
 
@@ -59,7 +68,7 @@ class _AddNoteState extends State<AddNote> {
                 ),
                 SizedBox(height: 20.h),
                 TextField(
-                  controller: controller,
+                  controller: _controller,
                   style: TextStyle(
                     color: FFColors.whate,
                     fontSize: 28.h,
@@ -108,8 +117,9 @@ class _AddNoteState extends State<AddNote> {
                     ),
                     const Spacer(),
                     BlocProvider(
-                      create: (context) => SetTodoCubit(TodoRepoImpl()),
-                      child: BlocConsumer<SetTodoCubit, SetTodoState>(
+                      create: (context) => UpdateTodoNameCubit(TodoRepoImpl()),
+                      child: BlocConsumer<UpdateTodoNameCubit,
+                          UpdateTodoNameState>(
                         listener: (context, state) {
                           state.whenOrNull(
                             success: () {
@@ -120,15 +130,11 @@ class _AddNoteState extends State<AddNote> {
                         builder: (context, state) {
                           return FFMotion(
                             onPressed: () {
-                              if (controller.text.isNotEmpty) {
-                                TodoHiveModel todoHiveModel = TodoHiveModel(
-                                  id: DateTime.now().millisecondsSinceEpoch,
-                                  name: controller.text,
-                                  isActive: false,
-                                );
+                              if (_controller.text.isNotEmpty) {
                                 context
-                                    .read<SetTodoCubit>()
-                                    .setTodo(todoHiveModel);
+                                    .read<UpdateTodoNameCubit>()
+                                    .updateTodoNameAll(
+                                        widget.model.id, _controller.text);
                               }
                             },
                             child: Container(

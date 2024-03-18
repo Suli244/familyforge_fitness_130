@@ -5,6 +5,7 @@ abstract class TodoRepo {
   Future<List<TodoHiveModel>> getTodo();
   Future<void> setTodo(TodoHiveModel todoHiveModel);
   Future<void> updateTodo(int id, bool isActive);
+  Future<void> updateTodoName(int id, String name);
 }
 
 class TodoRepoImpl implements TodoRepo {
@@ -26,6 +27,15 @@ class TodoRepoImpl implements TodoRepo {
     List<TodoHiveModel> listNotification =
         todoBox.values.where((e) => e.id == id).toList();
     listNotification.first.isActive = isActive;
+    await listNotification.first.save();
+  }
+
+  @override
+  Future<void> updateTodoName(int id, String name) async {
+    final todoBox = await Hive.openBox<TodoHiveModel>('TodoBox');
+    List<TodoHiveModel> listNotification =
+        todoBox.values.where((e) => e.id == id).toList();
+    listNotification.first.name = name;
     await listNotification.first.save();
   }
 }
