@@ -1,5 +1,5 @@
 import 'package:familyforge_fitness_130/core/ff_colors.dart';
-import 'package:familyforge_fitness_130/core/ff_motin.dart';
+import 'package:familyforge_fitness_130/settings/familyforge_fitness_prenv.dart';
 import 'package:familyforge_fitness_130/training/training_rasp.dart';
 import 'package:familyforge_fitness_130/training/widgets/for_widget.dart';
 import 'package:familyforge_fitness_130/training/widgets/train_widget.dart';
@@ -74,33 +74,40 @@ class _TrainingScreenState extends State<TrainingScreen> {
                   ],
                 ),
               ),
-              Expanded(
-                child: TabBarView(
-                  children: [
-                    ListView.separated(
-                      padding: EdgeInsets.symmetric(vertical: 10.r),
-                      shrinkWrap: true,
-                      itemCount: listTraining.length,
-                      separatorBuilder: (context, index) =>
-                          const SizedBox(height: 12),
-                      itemBuilder: (context, index) => TrainWidget(
-                        model: listTraining[index],
-                        index: index + 1,
+              FutureBuilder(
+                  future: getFamilyforgeFitnessPknqwvm(),
+                  builder: (context, snapshot) {
+                    bool chek = snapshot.data ?? false;
+                    return Expanded(
+                      child: TabBarView(
+                        children: [
+                          ListView.separated(
+                            padding: EdgeInsets.symmetric(vertical: 10.r),
+                            shrinkWrap: true,
+                            itemCount: listTraining.length,
+                            separatorBuilder: (context, index) =>
+                                const SizedBox(height: 12),
+                            itemBuilder: (context, index) => TrainWidget(
+                              model: listTraining[index],
+                              index: index + 1,
+                              chekPtem: index > 3 && !chek,
+                            ),
+                          ),
+                          ListView.separated(
+                            padding: EdgeInsets.symmetric(vertical: 10.r),
+                            shrinkWrap: true,
+                            itemCount: listVideo.length,
+                            separatorBuilder: (context, index) =>
+                                const SizedBox(height: 12),
+                            itemBuilder: (context, index) => ForWidget(
+                              model: listVideo[index],
+                               chekPtem: index > 3 && !chek,
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                    ListView.separated(
-                      padding: EdgeInsets.symmetric(vertical: 10.r),
-                      shrinkWrap: true,
-                      itemCount: listVideo.length,
-                      separatorBuilder: (context, index) =>
-                          const SizedBox(height: 12),
-                      itemBuilder: (context, index) => ForWidget(
-                        model: listVideo[index],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+                    );
+                  }),
             ],
           ),
         ),
