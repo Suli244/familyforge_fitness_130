@@ -1,4 +1,4 @@
-part of 'set_reminders_cubit.dart';
+part of 'set_scknasc.dart';
 
 @freezed
 class SetRemindersState with _$SetRemindersState {

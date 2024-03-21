@@ -20,21 +20,21 @@ mixin _$GetRemindersState {
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function(String error) error,
-    required TResult Function(List<RemindersHiveModel> model) success,
+    required TResult Function(List<RemcskcnsdcHHH> model) success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
     TResult? Function(String error)? error,
-    TResult? Function(List<RemindersHiveModel> model)? success,
+    TResult? Function(List<RemcskcnsdcHHH> model)? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
     TResult Function(String error)? error,
-    TResult Function(List<RemindersHiveModel> model)? success,
+    TResult Function(List<RemcskcnsdcHHH> model)? success,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -119,7 +119,7 @@ class _$_Loading implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function(String error) error,
-    required TResult Function(List<RemindersHiveModel> model) success,
+    required TResult Function(List<RemcskcnsdcHHH> model) success,
   }) {
     return loading();
   }
@@ -129,7 +129,7 @@ class _$_Loading implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
     TResult? Function(String error)? error,
-    TResult? Function(List<RemindersHiveModel> model)? success,
+    TResult? Function(List<RemcskcnsdcHHH> model)? success,
   }) {
     return loading?.call();
   }
@@ -139,7 +139,7 @@ class _$_Loading implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
     TResult Function(String error)? error,
-    TResult Function(List<RemindersHiveModel> model)? success,
+    TResult Function(List<RemcskcnsdcHHH> model)? success,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -251,7 +251,7 @@ class _$_Error implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function(String error) error,
-    required TResult Function(List<RemindersHiveModel> model) success,
+    required TResult Function(List<RemcskcnsdcHHH> model) success,
   }) {
     return error(this.error);
   }
@@ -261,7 +261,7 @@ class _$_Error implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
     TResult? Function(String error)? error,
-    TResult? Function(List<RemindersHiveModel> model)? success,
+    TResult? Function(List<RemcskcnsdcHHH> model)? success,
   }) {
     return error?.call(this.error);
   }
@@ -271,7 +271,7 @@ class _$_Error implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
     TResult Function(String error)? error,
-    TResult Function(List<RemindersHiveModel> model)? success,
+    TResult Function(List<RemcskcnsdcHHH> model)? success,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -330,7 +330,7 @@ abstract class _$$_SuccessCopyWith<$Res> {
           _$_Success value, $Res Function(_$_Success) then) =
       __$$_SuccessCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<RemindersHiveModel> model});
+  $Res call({List<RemcskcnsdcHHH> model});
 }
 
 /// @nodoc
@@ -349,7 +349,7 @@ class __$$_SuccessCopyWithImpl<$Res>
       null == model
           ? _value._model
           : model // ignore: cast_nullable_to_non_nullable
-              as List<RemindersHiveModel>,
+              as List<RemcskcnsdcHHH>,
     ));
   }
 }
@@ -357,11 +357,11 @@ class __$$_SuccessCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_Success implements _Success {
-  const _$_Success(final List<RemindersHiveModel> model) : _model = model;
+  const _$_Success(final List<RemcskcnsdcHHH> model) : _model = model;
 
-  final List<RemindersHiveModel> _model;
+  final List<RemcskcnsdcHHH> _model;
   @override
-  List<RemindersHiveModel> get model {
+  List<RemcskcnsdcHHH> get model {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_model);
   }
@@ -394,7 +394,7 @@ class _$_Success implements _Success {
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function(String error) error,
-    required TResult Function(List<RemindersHiveModel> model) success,
+    required TResult Function(List<RemcskcnsdcHHH> model) success,
   }) {
     return success(model);
   }
@@ -404,7 +404,7 @@ class _$_Success implements _Success {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
     TResult? Function(String error)? error,
-    TResult? Function(List<RemindersHiveModel> model)? success,
+    TResult? Function(List<RemcskcnsdcHHH> model)? success,
   }) {
     return success?.call(model);
   }
@@ -414,7 +414,7 @@ class _$_Success implements _Success {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
     TResult Function(String error)? error,
-    TResult Function(List<RemindersHiveModel> model)? success,
+    TResult Function(List<RemcskcnsdcHHH> model)? success,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -459,9 +459,9 @@ class _$_Success implements _Success {
 }
 
 abstract class _Success implements GetRemindersState {
-  const factory _Success(final List<RemindersHiveModel> model) = _$_Success;
+  const factory _Success(final List<RemcskcnsdcHHH> model) = _$_Success;
 
-  List<RemindersHiveModel> get model;
+  List<RemcskcnsdcHHH> get model;
   @JsonKey(ignore: true)
   _$$_SuccessCopyWith<_$_Success> get copyWith =>
       throw _privateConstructorUsedError;

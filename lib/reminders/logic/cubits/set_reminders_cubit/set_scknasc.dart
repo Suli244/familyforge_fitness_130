@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'set_reknvsvd.dart';
-part 'set_reminders_cubit.freezed.dart';
+part 'set_scknasc.freezed.dart';
 
 class SetRemindersCubit extends Cubit<SetRemindersState> {
   SetRemindersCubit(
@@ -14,7 +14,7 @@ class SetRemindersCubit extends Cubit<SetRemindersState> {
 
   final RepossImpl pouvbsd;
 
-  setReminders(RemindersHiveModel remindersHiveModel) async {
+  setReminders(RemcskcnsdcHHH remindersHiveModel) async {
     emit(const SetRemindersState.loading());
     try {
       await pouvbsd.setRncakcac(remindersHiveModel);

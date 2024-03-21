@@ -3,21 +3,21 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 class RepossImpl implements Reposs {
   @override
-  Future<List<RemindersHiveModel>> getRncakcac() async {
-    final relksvdvdvsd = await Hive.openBox<RemindersHiveModel>('relksvdvdvsd');
+  Future<List<RemcskcnsdcHHH>> getRncakcac() async {
+    final relksvdvdvsd = await Hive.openBox<RemcskcnsdcHHH>('relksvdvdvsd');
     return relksvdvdvsd.values.toList();
   }
 
   @override
-  Future<void> setRncakcac(RemindersHiveModel remindersHiveModel) async {
-    final relksvdvdvsd = await Hive.openBox<RemindersHiveModel>('relksvdvdvsd');
-    await relksvdvdvsd.add(remindersHiveModel);
+  Future<void> setRncakcac(RemcskcnsdcHHH remcskcnsdcHHH) async {
+    final relksvdvdvsd = await Hive.openBox<RemcskcnsdcHHH>('relksvdvdvsd');
+    await relksvdvdvsd.add(remcskcnsdcHHH);
   }
 
   @override
   Future<void> updateRncakcac(String id, String name) async {
-    final relksvdvdvsd = await Hive.openBox<RemindersHiveModel>('relksvdvdvsd');
-    List<RemindersHiveModel> lllalsckascas =
+    final relksvdvdvsd = await Hive.openBox<RemcskcnsdcHHH>('relksvdvdvsd');
+    List<RemcskcnsdcHHH> lllalsckascas =
         relksvdvdvsd.values.where((e) => e.id == id).toList();
     lllalsckascas.first.name = name;
     await lllalsckascas.first.save();
@@ -25,7 +25,7 @@ class RepossImpl implements Reposs {
 
   @override
   Future<void> deleteRncakcac(String id) async {
-    final relksvdvdvsd = await Hive.openBox<RemindersHiveModel>('relksvdvdvsd');
+    final relksvdvdvsd = await Hive.openBox<RemcskcnsdcHHH>('relksvdvdvsd');
     final remsdvmsd =
         relksvdvdvsd.values.toList().singleWhere((e) => e.id == id);
     await remsdvmsd.delete();
@@ -34,8 +34,8 @@ class RepossImpl implements Reposs {
 }
 
 abstract class Reposs {
-  Future<List<RemindersHiveModel>> getRncakcac();
-  Future<void> setRncakcac(RemindersHiveModel remindersHiveModel);
+  Future<List<RemcskcnsdcHHH>> getRncakcac();
+  Future<void> setRncakcac(RemcskcnsdcHHH remcskcnsdcHHH);
   Future<void> updateRncakcac(String id, String name);
   Future<void> deleteRncakcac(String id);
 }

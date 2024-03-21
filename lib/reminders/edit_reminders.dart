@@ -10,7 +10,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class EditReminders extends StatefulWidget {
   const EditReminders({super.key, required this.model});
   // final ValueChanged model;
-  final RemindersHiveModel model;
+  final RemcskcnsdcHHH model;
   @override
   State<EditReminders> createState() => _EditRemindersState();
 }

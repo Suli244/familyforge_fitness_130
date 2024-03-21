@@ -1,6 +1,6 @@
 import 'package:familyforge_fitness_130/core/FF_motin.dart';
 import 'package:familyforge_fitness_130/core/ff_colors.dart';
-import 'package:familyforge_fitness_130/reminders/logic/cubits/set_reminders_cubit/set_reminders_cubit.dart';
+import 'package:familyforge_fitness_130/reminders/logic/cubits/set_reminders_cubit/set_scknasc.dart';
 import 'package:familyforge_fitness_130/reminders/logic/model/reminders_hive_model.dart';
 import 'package:familyforge_fitness_130/reminders/logic/repositories/remindsvmskvsdvds.dart';
 import 'package:flutter/material.dart';
@@ -117,15 +117,15 @@ class _AddRemindersState extends State<AddReminders> {
                           return FFMotion(
                             onPressed: () {
                               if (controller.text.isNotEmpty) {
-                                RemindersHiveModel remindersHiveModel =
-                                    RemindersHiveModel(
+                                RemcskcnsdcHHH remcskcnsdcHHH =
+                                    RemcskcnsdcHHH(
                                         id: '${DateTime.now().millisecondsSinceEpoch}',
                                         name: controller.text,
                                         dateTime: widget.datee,
                                         color: FFColors.redE80000.value);
                                 context
                                     .read<SetRemindersCubit>()
-                                    .setReminders(remindersHiveModel);
+                                    .setReminders(remcskcnsdcHHH);
                               }
                             },
                             child: Container(

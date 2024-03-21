@@ -6,17 +6,17 @@ part of 'reminders_hive_model.dart';
 // TypeAdapterGenerator
 // **************************************************************************
 
-class RemindersHiveModelAdapter extends TypeAdapter<RemindersHiveModel> {
+class RemcskcnsdcHHHAdapter extends TypeAdapter<RemcskcnsdcHHH> {
   @override
   final int typeId = 0;
 
   @override
-  RemindersHiveModel read(BinaryReader reader) {
+  RemcskcnsdcHHH read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return RemindersHiveModel(
+    return RemcskcnsdcHHH(
       id: fields[0] as String,
       name: fields[1] as String,
       dateTime: fields[2] as DateTime,
@@ -25,7 +25,7 @@ class RemindersHiveModelAdapter extends TypeAdapter<RemindersHiveModel> {
   }
 
   @override
-  void write(BinaryWriter writer, RemindersHiveModel obj) {
+  void write(BinaryWriter writer, RemcskcnsdcHHH obj) {
     writer
       ..writeByte(4)
       ..writeByte(0)
@@ -44,7 +44,7 @@ class RemindersHiveModelAdapter extends TypeAdapter<RemindersHiveModel> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is RemindersHiveModelAdapter &&
+      other is RemcskcnsdcHHHAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }

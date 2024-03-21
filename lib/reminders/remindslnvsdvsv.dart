@@ -131,7 +131,7 @@ class _RemindersScreenState extends State<RemindersScreen> {
                             error: (error) =>
                                 const Center(child: Text('Error')),
                             success: (model) {
-                              List<RemindersHiveModel> filteredModel =
+                              List<RemcskcnsdcHHH> filteredModel =
                                   model.where((item) {
                                 return item.dateTime.month ==
                                         _selectedDate.month &&
@@ -148,7 +148,7 @@ class _RemindersScreenState extends State<RemindersScreen> {
 
                               _markedDateMap.clear();
 
-                              Map<DateTime, List<RemindersHiveModel>>
+                              Map<DateTime, List<RemcskcnsdcHHH>>
                                   groupedEvents = {};
                               for (var event in model) {
                                 DateTime dateWithoutTime = DateTime(
