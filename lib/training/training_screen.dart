@@ -2,7 +2,7 @@ import 'package:familyforge_fitness_130/core/ff_colors.dart';
 import 'package:familyforge_fitness_130/settings/familyforge_fitness_prenv.dart';
 import 'package:familyforge_fitness_130/training/training_rasp.dart';
 import 'package:familyforge_fitness_130/training/widgets/for_widget.dart';
-import 'package:familyforge_fitness_130/training/widgets/train_widget.dart';
+import 'package:familyforge_fitness_130/training/widgets/trn_wdgt.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -87,7 +87,7 @@ class _TrainingScreenState extends State<TrainingScreen> {
                             itemCount: listTraining.length,
                             separatorBuilder: (context, index) =>
                                 const SizedBox(height: 12),
-                            itemBuilder: (context, index) => TrainWidget(
+                            itemBuilder: (context, index) => TrnWdgt(
                               model: listTraining[index],
                               index: index + 1,
                               chekPtem: index > 3 && !chek,
@@ -101,7 +101,7 @@ class _TrainingScreenState extends State<TrainingScreen> {
                                 const SizedBox(height: 12),
                             itemBuilder: (context, index) => ForWidget(
                               model: listVideo[index],
-                               chekPtem: index > 3 && !chek,
+                              chekPtem: index > 3 && !chek,
                             ),
                           ),
                         ],

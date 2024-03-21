@@ -10,8 +10,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:shimmer/shimmer.dart';
 
-class TrainWidget extends StatelessWidget {
-  const TrainWidget({
+class TrnWdgt extends StatelessWidget {
+  const TrnWdgt({
     super.key,
     required this.model,
     required this.index,

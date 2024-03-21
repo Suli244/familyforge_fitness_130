@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:familyforge_fitness_130/core/concbasasas.dart';
 import 'package:familyforge_fitness_130/core/ff_colors.dart';
 import 'package:familyforge_fitness_130/core/ff_motin.dart';
-import 'package:familyforge_fitness_130/core/urls.dart';
+import 'package:familyforge_fitness_130/core/urlssyl.dart';
 import 'package:familyforge_fitness_130/core/wevmkvnsb.dart';
 import 'package:familyforge_fitness_130/premium/widget/ppremsnvdsvsd.dart';
 import 'package:familyforge_fitness_130/premium/widget/restoreewisv.dart';

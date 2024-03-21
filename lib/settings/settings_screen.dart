@@ -1,4 +1,4 @@
-import 'package:familyforge_fitness_130/core/urls.dart';
+import 'package:familyforge_fitness_130/core/urlssyl.dart';
 import 'package:familyforge_fitness_130/core/wevmkvnsb.dart';
 import 'package:familyforge_fitness_130/premium/preminvdsvd.dart';
 import 'package:familyforge_fitness_130/settings/familyforge_fitness_prenv.dart';
