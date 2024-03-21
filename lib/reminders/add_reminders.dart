@@ -2,7 +2,7 @@ import 'package:familyforge_fitness_130/core/FF_motin.dart';
 import 'package:familyforge_fitness_130/core/ff_colors.dart';
 import 'package:familyforge_fitness_130/reminders/logic/cubits/set_reminders_cubit/set_reminders_cubit.dart';
 import 'package:familyforge_fitness_130/reminders/logic/model/reminders_hive_model.dart';
-import 'package:familyforge_fitness_130/reminders/logic/repositories/reminders_repo.dart';
+import 'package:familyforge_fitness_130/reminders/logic/repositories/remindsvmskvsdvds.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

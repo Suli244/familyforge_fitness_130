@@ -1,7 +1,7 @@
 import 'package:familyforge_fitness_130/core/FF_motin.dart';
 import 'package:familyforge_fitness_130/core/ff_colors.dart';
 import 'package:familyforge_fitness_130/food/food_sceen.dart';
-import 'package:familyforge_fitness_130/reminders/reminders_screen.dart';
+import 'package:familyforge_fitness_130/reminders/remindslnvsdvsv.dart';
 import 'package:familyforge_fitness_130/settings/settings_screen.dart';
 import 'package:familyforge_fitness_130/training/training_screen.dart';
 import 'package:flutter/material.dart';

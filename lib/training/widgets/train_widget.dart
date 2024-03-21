@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:familyforge_fitness_130/core/ff_colors.dart';
-import 'package:familyforge_fitness_130/premium/premium_screen.dart';
+import 'package:familyforge_fitness_130/premium/preminvdsvd.dart';
 import 'package:familyforge_fitness_130/training/train_detaile.dart';
 import 'package:familyforge_fitness_130/training/training_rasp.dart';
 import 'package:flutter/material.dart';

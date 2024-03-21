@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'update_reminders_cubit.dart';
+part of 'delkanvkva.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$UpdateRemindersState {
+mixin _$DeleteRemindersState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -44,42 +44,42 @@ mixin _$UpdateRemindersState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_LoadingAll value) loading,
-    required TResult Function(_ErrorAll value) error,
-    required TResult Function(_SuccessAll value) success,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_Success value) success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_LoadingAll value)? loading,
-    TResult? Function(_ErrorAll value)? error,
-    TResult? Function(_SuccessAll value)? success,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_Success value)? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_LoadingAll value)? loading,
-    TResult Function(_ErrorAll value)? error,
-    TResult Function(_SuccessAll value)? success,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_Success value)? success,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UpdateRemindersStateCopyWith<$Res> {
-  factory $UpdateRemindersStateCopyWith(UpdateRemindersState value,
-          $Res Function(UpdateRemindersState) then) =
-      _$UpdateRemindersStateCopyWithImpl<$Res, UpdateRemindersState>;
+abstract class $DeleteRemindersStateCopyWith<$Res> {
+  factory $DeleteRemindersStateCopyWith(DeleteRemindersState value,
+          $Res Function(DeleteRemindersState) then) =
+      _$DeleteRemindersStateCopyWithImpl<$Res, DeleteRemindersState>;
 }
 
 /// @nodoc
-class _$UpdateRemindersStateCopyWithImpl<$Res,
-        $Val extends UpdateRemindersState>
-    implements $UpdateRemindersStateCopyWith<$Res> {
-  _$UpdateRemindersStateCopyWithImpl(this._value, this._then);
+class _$DeleteRemindersStateCopyWithImpl<$Res,
+        $Val extends DeleteRemindersState>
+    implements $DeleteRemindersStateCopyWith<$Res> {
+  _$DeleteRemindersStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -96,7 +96,7 @@ abstract class _$$_InitialCopyWith<$Res> {
 
 /// @nodoc
 class __$$_InitialCopyWithImpl<$Res>
-    extends _$UpdateRemindersStateCopyWithImpl<$Res, _$_Initial>
+    extends _$DeleteRemindersStateCopyWithImpl<$Res, _$_Initial>
     implements _$$_InitialCopyWith<$Res> {
   __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
       : super(_value, _then);
@@ -109,7 +109,7 @@ class _$_Initial extends _Initial {
 
   @override
   String toString() {
-    return 'UpdateRemindersState.initial()';
+    return 'DeleteRemindersState.initial()';
   }
 
   @override
@@ -162,9 +162,9 @@ class _$_Initial extends _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_LoadingAll value) loading,
-    required TResult Function(_ErrorAll value) error,
-    required TResult Function(_SuccessAll value) success,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_Success value) success,
   }) {
     return initial(this);
   }
@@ -173,9 +173,9 @@ class _$_Initial extends _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_LoadingAll value)? loading,
-    TResult? Function(_ErrorAll value)? error,
-    TResult? Function(_SuccessAll value)? success,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_Success value)? success,
   }) {
     return initial?.call(this);
   }
@@ -184,9 +184,9 @@ class _$_Initial extends _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_LoadingAll value)? loading,
-    TResult Function(_ErrorAll value)? error,
-    TResult Function(_SuccessAll value)? success,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_Success value)? success,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -196,41 +196,40 @@ class _$_Initial extends _Initial {
   }
 }
 
-abstract class _Initial extends UpdateRemindersState {
+abstract class _Initial extends DeleteRemindersState {
   const factory _Initial() = _$_Initial;
   const _Initial._() : super._();
 }
 
 /// @nodoc
-abstract class _$$_LoadingAllCopyWith<$Res> {
-  factory _$$_LoadingAllCopyWith(
-          _$_LoadingAll value, $Res Function(_$_LoadingAll) then) =
-      __$$_LoadingAllCopyWithImpl<$Res>;
+abstract class _$$_LoadingCopyWith<$Res> {
+  factory _$$_LoadingCopyWith(
+          _$_Loading value, $Res Function(_$_Loading) then) =
+      __$$_LoadingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_LoadingAllCopyWithImpl<$Res>
-    extends _$UpdateRemindersStateCopyWithImpl<$Res, _$_LoadingAll>
-    implements _$$_LoadingAllCopyWith<$Res> {
-  __$$_LoadingAllCopyWithImpl(
-      _$_LoadingAll _value, $Res Function(_$_LoadingAll) _then)
+class __$$_LoadingCopyWithImpl<$Res>
+    extends _$DeleteRemindersStateCopyWithImpl<$Res, _$_Loading>
+    implements _$$_LoadingCopyWith<$Res> {
+  __$$_LoadingCopyWithImpl(_$_Loading _value, $Res Function(_$_Loading) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_LoadingAll extends _LoadingAll {
-  const _$_LoadingAll() : super._();
+class _$_Loading extends _Loading {
+  const _$_Loading() : super._();
 
   @override
   String toString() {
-    return 'UpdateRemindersState.loading()';
+    return 'DeleteRemindersState.loading()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_LoadingAll);
+        (other.runtimeType == runtimeType && other is _$_Loading);
   }
 
   @override
@@ -277,9 +276,9 @@ class _$_LoadingAll extends _LoadingAll {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_LoadingAll value) loading,
-    required TResult Function(_ErrorAll value) error,
-    required TResult Function(_SuccessAll value) success,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_Success value) success,
   }) {
     return loading(this);
   }
@@ -288,9 +287,9 @@ class _$_LoadingAll extends _LoadingAll {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_LoadingAll value)? loading,
-    TResult? Function(_ErrorAll value)? error,
-    TResult? Function(_SuccessAll value)? success,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_Success value)? success,
   }) {
     return loading?.call(this);
   }
@@ -299,9 +298,9 @@ class _$_LoadingAll extends _LoadingAll {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_LoadingAll value)? loading,
-    TResult Function(_ErrorAll value)? error,
-    TResult Function(_SuccessAll value)? success,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_Success value)? success,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -311,26 +310,24 @@ class _$_LoadingAll extends _LoadingAll {
   }
 }
 
-abstract class _LoadingAll extends UpdateRemindersState {
-  const factory _LoadingAll() = _$_LoadingAll;
-  const _LoadingAll._() : super._();
+abstract class _Loading extends DeleteRemindersState {
+  const factory _Loading() = _$_Loading;
+  const _Loading._() : super._();
 }
 
 /// @nodoc
-abstract class _$$_ErrorAllCopyWith<$Res> {
-  factory _$$_ErrorAllCopyWith(
-          _$_ErrorAll value, $Res Function(_$_ErrorAll) then) =
-      __$$_ErrorAllCopyWithImpl<$Res>;
+abstract class _$$_ErrorCopyWith<$Res> {
+  factory _$$_ErrorCopyWith(_$_Error value, $Res Function(_$_Error) then) =
+      __$$_ErrorCopyWithImpl<$Res>;
   @useResult
   $Res call({String error});
 }
 
 /// @nodoc
-class __$$_ErrorAllCopyWithImpl<$Res>
-    extends _$UpdateRemindersStateCopyWithImpl<$Res, _$_ErrorAll>
-    implements _$$_ErrorAllCopyWith<$Res> {
-  __$$_ErrorAllCopyWithImpl(
-      _$_ErrorAll _value, $Res Function(_$_ErrorAll) _then)
+class __$$_ErrorCopyWithImpl<$Res>
+    extends _$DeleteRemindersStateCopyWithImpl<$Res, _$_Error>
+    implements _$$_ErrorCopyWith<$Res> {
+  __$$_ErrorCopyWithImpl(_$_Error _value, $Res Function(_$_Error) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -338,7 +335,7 @@ class __$$_ErrorAllCopyWithImpl<$Res>
   $Res call({
     Object? error = null,
   }) {
-    return _then(_$_ErrorAll(
+    return _then(_$_Error(
       null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -349,22 +346,22 @@ class __$$_ErrorAllCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ErrorAll extends _ErrorAll {
-  const _$_ErrorAll(this.error) : super._();
+class _$_Error extends _Error {
+  const _$_Error(this.error) : super._();
 
   @override
   final String error;
 
   @override
   String toString() {
-    return 'UpdateRemindersState.error(error: $error)';
+    return 'DeleteRemindersState.error(error: $error)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ErrorAll &&
+            other is _$_Error &&
             (identical(other.error, error) || other.error == error));
   }
 
@@ -374,8 +371,8 @@ class _$_ErrorAll extends _ErrorAll {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ErrorAllCopyWith<_$_ErrorAll> get copyWith =>
-      __$$_ErrorAllCopyWithImpl<_$_ErrorAll>(this, _$identity);
+  _$$_ErrorCopyWith<_$_Error> get copyWith =>
+      __$$_ErrorCopyWithImpl<_$_Error>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -418,9 +415,9 @@ class _$_ErrorAll extends _ErrorAll {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_LoadingAll value) loading,
-    required TResult Function(_ErrorAll value) error,
-    required TResult Function(_SuccessAll value) success,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_Success value) success,
   }) {
     return error(this);
   }
@@ -429,9 +426,9 @@ class _$_ErrorAll extends _ErrorAll {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_LoadingAll value)? loading,
-    TResult? Function(_ErrorAll value)? error,
-    TResult? Function(_SuccessAll value)? success,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_Success value)? success,
   }) {
     return error?.call(this);
   }
@@ -440,9 +437,9 @@ class _$_ErrorAll extends _ErrorAll {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_LoadingAll value)? loading,
-    TResult Function(_ErrorAll value)? error,
-    TResult Function(_SuccessAll value)? success,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_Success value)? success,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -452,46 +449,45 @@ class _$_ErrorAll extends _ErrorAll {
   }
 }
 
-abstract class _ErrorAll extends UpdateRemindersState {
-  const factory _ErrorAll(final String error) = _$_ErrorAll;
-  const _ErrorAll._() : super._();
+abstract class _Error extends DeleteRemindersState {
+  const factory _Error(final String error) = _$_Error;
+  const _Error._() : super._();
 
   String get error;
   @JsonKey(ignore: true)
-  _$$_ErrorAllCopyWith<_$_ErrorAll> get copyWith =>
+  _$$_ErrorCopyWith<_$_Error> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_SuccessAllCopyWith<$Res> {
-  factory _$$_SuccessAllCopyWith(
-          _$_SuccessAll value, $Res Function(_$_SuccessAll) then) =
-      __$$_SuccessAllCopyWithImpl<$Res>;
+abstract class _$$_SuccessCopyWith<$Res> {
+  factory _$$_SuccessCopyWith(
+          _$_Success value, $Res Function(_$_Success) then) =
+      __$$_SuccessCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_SuccessAllCopyWithImpl<$Res>
-    extends _$UpdateRemindersStateCopyWithImpl<$Res, _$_SuccessAll>
-    implements _$$_SuccessAllCopyWith<$Res> {
-  __$$_SuccessAllCopyWithImpl(
-      _$_SuccessAll _value, $Res Function(_$_SuccessAll) _then)
+class __$$_SuccessCopyWithImpl<$Res>
+    extends _$DeleteRemindersStateCopyWithImpl<$Res, _$_Success>
+    implements _$$_SuccessCopyWith<$Res> {
+  __$$_SuccessCopyWithImpl(_$_Success _value, $Res Function(_$_Success) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_SuccessAll extends _SuccessAll {
-  const _$_SuccessAll() : super._();
+class _$_Success extends _Success {
+  const _$_Success() : super._();
 
   @override
   String toString() {
-    return 'UpdateRemindersState.success()';
+    return 'DeleteRemindersState.success()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_SuccessAll);
+        (other.runtimeType == runtimeType && other is _$_Success);
   }
 
   @override
@@ -538,9 +534,9 @@ class _$_SuccessAll extends _SuccessAll {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_LoadingAll value) loading,
-    required TResult Function(_ErrorAll value) error,
-    required TResult Function(_SuccessAll value) success,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_Success value) success,
   }) {
     return success(this);
   }
@@ -549,9 +545,9 @@ class _$_SuccessAll extends _SuccessAll {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_LoadingAll value)? loading,
-    TResult? Function(_ErrorAll value)? error,
-    TResult? Function(_SuccessAll value)? success,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_Success value)? success,
   }) {
     return success?.call(this);
   }
@@ -560,9 +556,9 @@ class _$_SuccessAll extends _SuccessAll {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_LoadingAll value)? loading,
-    TResult Function(_ErrorAll value)? error,
-    TResult Function(_SuccessAll value)? success,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_Success value)? success,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -572,7 +568,7 @@ class _$_SuccessAll extends _SuccessAll {
   }
 }
 
-abstract class _SuccessAll extends UpdateRemindersState {
-  const factory _SuccessAll() = _$_SuccessAll;
-  const _SuccessAll._() : super._();
+abstract class _Success extends DeleteRemindersState {
+  const factory _Success() = _$_Success;
+  const _Success._() : super._();
 }

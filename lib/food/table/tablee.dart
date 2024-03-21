@@ -1,5 +1,5 @@
 import 'package:familyforge_fitness_130/food/table/detail_image/detail_image.dart';
-import 'package:familyforge_fitness_130/settings/widget/settings_item_widget.dart';
+import 'package:familyforge_fitness_130/settings/widget/estsevmsvsvs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

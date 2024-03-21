@@ -1,4 +1,4 @@
-part of 'delete_reminders_cubit.dart';
+part of 'delkanvkva.dart';
 
 @freezed
 class DeleteRemindersState with _$DeleteRemindersState {

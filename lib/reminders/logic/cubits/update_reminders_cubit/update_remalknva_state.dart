@@ -1,4 +1,4 @@
-part of 'update_reminders_cubit.dart';
+part of 'update_remalknva.dart';
 
 @freezed
 class UpdateRemindersState with _$UpdateRemindersState {

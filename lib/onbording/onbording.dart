@@ -1,7 +1,7 @@
 import 'package:familyforge_fitness_130/core/ff_colors.dart';
 import 'package:familyforge_fitness_130/core/ff_motin.dart';
-import 'package:familyforge_fitness_130/onbording/widget/onboarding_item_widget.dart';
-import 'package:familyforge_fitness_130/premium/premium_screen.dart';
+import 'package:familyforge_fitness_130/onbording/widget/onboaraacawiwdd.dart';
+import 'package:familyforge_fitness_130/premium/preminvdsvd.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

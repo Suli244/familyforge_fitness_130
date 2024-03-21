@@ -1,4 +1,4 @@
-part of 'get_reminders_cubit.dart';
+part of 'get_rempovsdvsdv.dart';
 
 @freezed
 class GetRemindersState with _$GetRemindersState {

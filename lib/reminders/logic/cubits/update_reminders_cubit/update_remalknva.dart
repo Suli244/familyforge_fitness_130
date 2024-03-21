@@ -1,9 +1,9 @@
-import 'package:familyforge_fitness_130/reminders/logic/repositories/reminders_repo.dart';
+import 'package:familyforge_fitness_130/reminders/logic/repositories/remindsvmskvsdvds.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'update_reminders_state.dart';
-part 'update_reminders_cubit.freezed.dart';
+part 'update_remalknva_state.dart';
+part 'update_remalknva.freezed.dart';
 
 class UpdateRemindersCubit extends Cubit<UpdateRemindersState> {
   UpdateRemindersCubit(this.repo) : super(const UpdateRemindersState.initial());
