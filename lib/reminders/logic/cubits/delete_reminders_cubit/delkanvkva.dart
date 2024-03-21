@@ -13,7 +13,7 @@ class DeleteRemindersCubit extends Cubit<DeleteRemindersState> {
   delete(String id) async {
     emit(const DeleteRemindersState.loading());
     try {
-      await repo.deleteReminders(id);
+      await repo.deleteRncakcac(id);
       emit(const DeleteRemindersState.success());
     } catch (e) {
       emit(DeleteRemindersState.error(e.toString()));

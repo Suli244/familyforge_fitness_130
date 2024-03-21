@@ -3,39 +3,39 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 class RepossImpl implements Reposs {
   @override
-  Future<List<RemindersHiveModel>> getReminders() async {
-    final remindersBox = await Hive.openBox<RemindersHiveModel>('RemindersBox');
-    return remindersBox.values.toList();
+  Future<List<RemindersHiveModel>> getRncakcac() async {
+    final relksvdvdvsd = await Hive.openBox<RemindersHiveModel>('relksvdvdvsd');
+    return relksvdvdvsd.values.toList();
   }
 
   @override
-  Future<void> setReminders(RemindersHiveModel remindersHiveModel) async {
-    final remindersBox = await Hive.openBox<RemindersHiveModel>('RemindersBox');
-    await remindersBox.add(remindersHiveModel);
+  Future<void> setRncakcac(RemindersHiveModel remindersHiveModel) async {
+    final relksvdvdvsd = await Hive.openBox<RemindersHiveModel>('relksvdvdvsd');
+    await relksvdvdvsd.add(remindersHiveModel);
   }
 
   @override
-  Future<void> updateReminders(String id, String name) async {
-    final remindersBox = await Hive.openBox<RemindersHiveModel>('RemindersBox');
-    List<RemindersHiveModel> listNotification =
-        remindersBox.values.where((e) => e.id == id).toList();
-    listNotification.first.name = name;
-    await listNotification.first.save();
+  Future<void> updateRncakcac(String id, String name) async {
+    final relksvdvdvsd = await Hive.openBox<RemindersHiveModel>('relksvdvdvsd');
+    List<RemindersHiveModel> lllalsckascas =
+        relksvdvdvsd.values.where((e) => e.id == id).toList();
+    lllalsckascas.first.name = name;
+    await lllalsckascas.first.save();
   }
 
   @override
-  Future<void> deleteReminders(String id) async {
-    final remindersBox = await Hive.openBox<RemindersHiveModel>('RemindersBox');
-    final remindersModel =
-        remindersBox.values.toList().singleWhere((e) => e.id == id);
-    await remindersModel.delete();
-    await remindersBox.compact();
+  Future<void> deleteRncakcac(String id) async {
+    final relksvdvdvsd = await Hive.openBox<RemindersHiveModel>('relksvdvdvsd');
+    final remsdvmsd =
+        relksvdvdvsd.values.toList().singleWhere((e) => e.id == id);
+    await remsdvmsd.delete();
+    await relksvdvdvsd.compact();
   }
 }
 
 abstract class Reposs {
-  Future<List<RemindersHiveModel>> getReminders();
-  Future<void> setReminders(RemindersHiveModel remindersHiveModel);
-  Future<void> updateReminders(String id, String name);
-  Future<void> deleteReminders(String id);
+  Future<List<RemindersHiveModel>> getRncakcac();
+  Future<void> setRncakcac(RemindersHiveModel remindersHiveModel);
+  Future<void> updateRncakcac(String id, String name);
+  Future<void> deleteRncakcac(String id);
 }

@@ -17,8 +17,8 @@ class FamilyforgeFitnessAdapty {
 
   Future<AdaptyProfile?> learCall() async {
     try {
-      final ocev = await familyforgeFitnessAdapty.getProfile();
-      return ocev;
+      final csacewe = await familyforgeFitnessAdapty.getProfile();
+      return csacewe;
     } on AdaptyError catch (adaptyError) {
       onFamilyforgeFitnessAdaptyErrorOccurred?.call(adaptyError);
     } catch (e) {
@@ -42,11 +42,11 @@ class FamilyforgeFitnessAdapty {
     String familyforgeFitnessPaywallId,
   ) async {
     try {
-      final familyforgeFitnessocev = await familyforgeFitnessAdapty.getPaywall(
+      final familyforgeFitnesscsacewe = await familyforgeFitnessAdapty.getPaywall(
         placementId: familyforgeFitnessPaywallId,
         loadTimeout: const Duration(seconds: 5),
       );
-      return familyforgeFitnessocev;
+      return familyforgeFitnesscsacewe;
     } on AdaptyError catch (adaptyError) {
       onFamilyforgeFitnessAdaptyErrorOccurred?.call(adaptyError);
     } catch (e) {
@@ -60,9 +60,9 @@ class FamilyforgeFitnessAdapty {
     AdaptyPaywall familyforgeFitnessPaywall,
   ) async {
     try {
-      final familyforgeFitnessocev =
+      final familyforgeFitnesscsacewe =
           await familyforgeFitnessAdapty.getPaywallProducts(paywall: familyforgeFitnessPaywall);
-      return familyforgeFitnessocev;
+      return familyforgeFitnesscsacewe;
     } on AdaptyError catch (adaptyError) {
       onFamilyforgeFitnessAdaptyErrorOccurred?.call(adaptyError);
     } catch (e) {
@@ -75,9 +75,9 @@ class FamilyforgeFitnessAdapty {
   Future<AdaptyProfile?> familyforgeFitnessMakePurchase(
       AdaptyPaywallProduct familyforgeFitnessProduct) async {
     try {
-      final familyforgeFitnessocev =
+      final familyforgeFitnesscsacewe =
           await familyforgeFitnessAdapty.makePurchase(product: familyforgeFitnessProduct);
-      return familyforgeFitnessocev;
+      return familyforgeFitnesscsacewe;
     } on AdaptyError catch (adaptyError) {
       onFamilyforgeFitnessAdaptyErrorOccurred?.call(adaptyError);
     } catch (e) {
@@ -89,9 +89,9 @@ class FamilyforgeFitnessAdapty {
 
   Future<AdaptyProfile?> familyforgeFitnessRestorePurchases() async {
     try {
-      final familyforgeFitnessocev = await familyforgeFitnessAdapty.restorePurchases();
+      final familyforgeFitnesscsacewe = await familyforgeFitnessAdapty.restorePurchases();
 
-      return familyforgeFitnessocev;
+      return familyforgeFitnesscsacewe;
     } on AdaptyError catch (adaptyError) {
       onFamilyforgeFitnessAdaptyErrorOccurred?.call(adaptyError);
     } catch (e) {

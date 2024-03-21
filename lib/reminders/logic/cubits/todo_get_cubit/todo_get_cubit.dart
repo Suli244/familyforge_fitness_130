@@ -12,8 +12,8 @@ class GetTodoCubit extends Cubit<GetTodoState> {
   getTodo() async {
     emit(const GetTodoState.loading());
     try {
-      final addTodoList = await repo.getTodo();
-      emit(GetTodoState.success(addTodoList.reversed.toList()));
+      final vsdvsdvsdv = await repo.getTodo();
+      emit(GetTodoState.success(vsdvsdvsdv.reversed.toList()));
     } catch (e) {
       emit(GetTodoState.error(e.toString()));
     }

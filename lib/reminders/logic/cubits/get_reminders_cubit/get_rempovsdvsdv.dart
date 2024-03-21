@@ -14,8 +14,8 @@ class GetRemindersCubit extends Cubit<GetRemindersState> {
   getReminders() async {
     emit(const GetRemindersState.loading());
     try {
-      final remindersList = await repo.getReminders();
-      emit(GetRemindersState.success(remindersList.reversed.toList()));
+      final csdcdsvsvds = await repo.getRncakcac();
+      emit(GetRemindersState.success(csdcdsvsvds.reversed.toList()));
     } catch (e) {
       emit(GetRemindersState.error(e.toString()));
     }

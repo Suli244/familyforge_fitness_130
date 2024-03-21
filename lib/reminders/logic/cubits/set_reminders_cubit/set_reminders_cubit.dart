@@ -17,7 +17,7 @@ class SetRemindersCubit extends Cubit<SetRemindersState> {
   setReminders(RemindersHiveModel remindersHiveModel) async {
     emit(const SetRemindersState.loading());
     try {
-      await pouvbsd.setReminders(remindersHiveModel);
+      await pouvbsd.setRncakcac(remindersHiveModel);
       emit(const SetRemindersState.success());
     } catch (e) {
       emit(SetRemindersState.error(e.toString()));

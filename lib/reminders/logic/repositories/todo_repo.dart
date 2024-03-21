@@ -11,31 +11,31 @@ abstract class TodoRepo {
 class TodoRepoImpl implements TodoRepo {
   @override
   Future<List<TodoHiveModel>> getTodo() async {
-    final todoBox = await Hive.openBox<TodoHiveModel>('TodoBox');
-    return todoBox.values.toList();
+    final djsnvsdvdsvsdv = await Hive.openBox<TodoHiveModel>('djsnvsdvdsvsdv');
+    return djsnvsdvdsvsdv.values.toList();
   }
 
   @override
   Future<void> setTodo(TodoHiveModel todoHiveModel) async {
-    final todoBox = await Hive.openBox<TodoHiveModel>('TodoBox');
-    await todoBox.add(todoHiveModel);
+    final djsnvsdvdsvsdv = await Hive.openBox<TodoHiveModel>('djsnvsdvdsvsdv');
+    await djsnvsdvdsvsdv.add(todoHiveModel);
   }
 
   @override
   Future<void> updateTodo(int id, bool isActive) async {
-    final todoBox = await Hive.openBox<TodoHiveModel>('TodoBox');
-    List<TodoHiveModel> listNotification =
-        todoBox.values.where((e) => e.id == id).toList();
-    listNotification.first.isActive = isActive;
-    await listNotification.first.save();
+    final djsnvsdvdsvsdv = await Hive.openBox<TodoHiveModel>('djsnvsdvdsvsdv');
+    List<TodoHiveModel> sjvsdnkvsdvdsvsd =
+        djsnvsdvdsvsdv.values.where((e) => e.id == id).toList();
+    sjvsdnkvsdvdsvsd.first.isActive = isActive;
+    await sjvsdnkvsdvdsvsd.first.save();
   }
 
   @override
   Future<void> updateTodoName(int id, String name) async {
-    final todoBox = await Hive.openBox<TodoHiveModel>('TodoBox');
-    List<TodoHiveModel> listNotification =
-        todoBox.values.where((e) => e.id == id).toList();
-    listNotification.first.name = name;
-    await listNotification.first.save();
+    final djsnvsdvdsvsdv = await Hive.openBox<TodoHiveModel>('djsnvsdvdsvsdv');
+    List<TodoHiveModel> sjvsdnkvsdvdsvsd =
+        djsnvsdvdsvsdv.values.where((e) => e.id == id).toList();
+    sjvsdnkvsdvdsvsd.first.name = name;
+    await sjvsdnkvsdvdsvsd.first.save();
   }
 }

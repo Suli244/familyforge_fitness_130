@@ -13,7 +13,7 @@ class UpdateRemindersCubit extends Cubit<UpdateRemindersState> {
   updateRemindersAll(String id, String name) async {
     emit(const UpdateRemindersState.loading());
     try {
-      await repo.updateReminders(id, name);
+      await repo.updateRncakcac(id, name);
 
       emit(const UpdateRemindersState.success());
     } catch (e) {
