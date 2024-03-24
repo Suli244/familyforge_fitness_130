@@ -105,8 +105,10 @@ class _AddNoteState extends State<AddNote> {
                     ),
                     const Spacer(),
                     BlocProvider(
-                      create: (context) => SetTodoCubit(TodoRepoImpl()),
-                      child: BlocConsumer<SetTodoCubit, SetTodoState>(
+                      create: (context) =>
+                          SetTodoCubitPklancac(TodoRepoQvsvImplMcasq()),
+                      child:
+                          BlocConsumer<SetTodoCubitPklancac, SetTodoStateMknsa>(
                         listener: (context, state) {
                           state.whenOrNull(
                             success: () {
@@ -124,7 +126,7 @@ class _AddNoteState extends State<AddNote> {
                                   isActive: false,
                                 );
                                 context
-                                    .read<SetTodoCubit>()
+                                    .read<SetTodoCubitPklancac>()
                                     .setTodo(todoHiveModel);
                               }
                             },

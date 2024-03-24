@@ -8,7 +8,7 @@ part 'update_todo_name_cubit.freezed.dart';
 class UpdateTodoNameCubit extends Cubit<UpdateTodoNameState> {
   UpdateTodoNameCubit(this.repo) : super(const UpdateTodoNameState.initial());
 
-  final TodoRepo repo;
+  final TodoRepoQvsv repo;
 
   updateTodoNameAll(int id, String name) async {
     emit(const UpdateTodoNameState.loading());

@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
           create: (context) => GetRemindersCubit(RepossImpl()),
         ),
         BlocProvider(
-          create: (context) => GetTodoCubit(TodoRepoImpl()),
+          create: (context) => GetTodoCubitIhcnajcasc(TodoRepoQvsvImplMcasq()),
         ),
       ],
       child: ScreenUtilInit(

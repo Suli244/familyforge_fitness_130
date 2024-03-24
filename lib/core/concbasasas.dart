@@ -136,7 +136,7 @@ class FFBottomBarState extends State<FFBottomBar> {
 
   late int isActive = widget.indexScr;
   final _pages = <Widget>[
-    const TrainingScreen(),
+    const TrainingScreenqfsvsd(),
     const FoodSceen(),
     const RemindersScreen(),
     const SettingsScreen(),

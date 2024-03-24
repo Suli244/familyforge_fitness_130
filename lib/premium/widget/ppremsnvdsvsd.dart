@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-class PremiumItemWidget extends StatelessWidget {
-  const PremiumItemWidget({
+class PremiumItemWidgetQsvskdn extends StatelessWidget {
+  const PremiumItemWidgetQsvskdn({
     super.key,
     required this.imagSvg,
     required this.text,

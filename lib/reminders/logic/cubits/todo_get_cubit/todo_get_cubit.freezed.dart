@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$GetTodoState {
+mixin _$GetTodoStateQocjamsc {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
@@ -63,16 +63,17 @@ mixin _$GetTodoState {
 }
 
 /// @nodoc
-abstract class $GetTodoStateCopyWith<$Res> {
-  factory $GetTodoStateCopyWith(
-          GetTodoState value, $Res Function(GetTodoState) then) =
-      _$GetTodoStateCopyWithImpl<$Res, GetTodoState>;
+abstract class $GetTodoStateQocjamscCopyWith<$Res> {
+  factory $GetTodoStateQocjamscCopyWith(GetTodoStateQocjamsc value,
+          $Res Function(GetTodoStateQocjamsc) then) =
+      _$GetTodoStateQocjamscCopyWithImpl<$Res, GetTodoStateQocjamsc>;
 }
 
 /// @nodoc
-class _$GetTodoStateCopyWithImpl<$Res, $Val extends GetTodoState>
-    implements $GetTodoStateCopyWith<$Res> {
-  _$GetTodoStateCopyWithImpl(this._value, this._then);
+class _$GetTodoStateQocjamscCopyWithImpl<$Res,
+        $Val extends GetTodoStateQocjamsc>
+    implements $GetTodoStateQocjamscCopyWith<$Res> {
+  _$GetTodoStateQocjamscCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -89,7 +90,7 @@ abstract class _$$_LoadingCopyWith<$Res> {
 
 /// @nodoc
 class __$$_LoadingCopyWithImpl<$Res>
-    extends _$GetTodoStateCopyWithImpl<$Res, _$_Loading>
+    extends _$GetTodoStateQocjamscCopyWithImpl<$Res, _$_Loading>
     implements _$$_LoadingCopyWith<$Res> {
   __$$_LoadingCopyWithImpl(_$_Loading _value, $Res Function(_$_Loading) _then)
       : super(_value, _then);
@@ -102,7 +103,7 @@ class _$_Loading implements _Loading {
 
   @override
   String toString() {
-    return 'GetTodoState.loading()';
+    return 'GetTodoStateQocjamsc.loading()';
   }
 
   @override
@@ -183,7 +184,7 @@ class _$_Loading implements _Loading {
   }
 }
 
-abstract class _Loading implements GetTodoState {
+abstract class _Loading implements GetTodoStateQocjamsc {
   const factory _Loading() = _$_Loading;
 }
 
@@ -197,7 +198,7 @@ abstract class _$$_ErrorCopyWith<$Res> {
 
 /// @nodoc
 class __$$_ErrorCopyWithImpl<$Res>
-    extends _$GetTodoStateCopyWithImpl<$Res, _$_Error>
+    extends _$GetTodoStateQocjamscCopyWithImpl<$Res, _$_Error>
     implements _$$_ErrorCopyWith<$Res> {
   __$$_ErrorCopyWithImpl(_$_Error _value, $Res Function(_$_Error) _then)
       : super(_value, _then);
@@ -226,7 +227,7 @@ class _$_Error implements _Error {
 
   @override
   String toString() {
-    return 'GetTodoState.error(error: $error)';
+    return 'GetTodoStateQocjamsc.error(error: $error)';
   }
 
   @override
@@ -315,7 +316,7 @@ class _$_Error implements _Error {
   }
 }
 
-abstract class _Error implements GetTodoState {
+abstract class _Error implements GetTodoStateQocjamsc {
   const factory _Error(final String error) = _$_Error;
 
   String get error;
@@ -335,7 +336,7 @@ abstract class _$$_SuccessCopyWith<$Res> {
 
 /// @nodoc
 class __$$_SuccessCopyWithImpl<$Res>
-    extends _$GetTodoStateCopyWithImpl<$Res, _$_Success>
+    extends _$GetTodoStateQocjamscCopyWithImpl<$Res, _$_Success>
     implements _$$_SuccessCopyWith<$Res> {
   __$$_SuccessCopyWithImpl(_$_Success _value, $Res Function(_$_Success) _then)
       : super(_value, _then);
@@ -368,7 +369,7 @@ class _$_Success implements _Success {
 
   @override
   String toString() {
-    return 'GetTodoState.success(model: $model)';
+    return 'GetTodoStateQocjamsc.success(model: $model)';
   }
 
   @override
@@ -458,7 +459,7 @@ class _$_Success implements _Success {
   }
 }
 
-abstract class _Success implements GetTodoState {
+abstract class _Success implements GetTodoStateQocjamsc {
   const factory _Success(final List<TodoHiveModel> model) = _$_Success;
 
   List<TodoHiveModel> get model;

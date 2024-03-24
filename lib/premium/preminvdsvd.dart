@@ -130,17 +130,17 @@ class _PremiumScreenState extends State<PremiumScreen> {
                       ),
                     ),
                     SizedBox(height: 14.h),
-                    const PremiumItemWidget(
+                    const PremiumItemWidgetQsvskdn(
                       imagSvg: 'assets/icons/training_icon.svg',
                       text: 'Unlock all the exercises',
                     ),
                     SizedBox(height: 10.h),
-                    const PremiumItemWidget(
+                    const PremiumItemWidgetQsvskdn(
                       imagSvg: 'assets/icons/food_icon.svg',
                       text: 'Unlock all the recipes',
                     ),
                     SizedBox(height: 10.h),
-                    const PremiumItemWidget(
+                    const PremiumItemWidgetQsvskdn(
                       imagSvg: 'assets/icons/prem_icon.svg',
                       text: 'No ADs',
                     ),
@@ -181,8 +181,8 @@ class _PremiumScreenState extends State<PremiumScreen> {
                           ),
                           child: trbbbdb
                               ? const CircularProgressIndicator(
-                                  valueColor:
-                                      AlwaysStoppedAnimation(FFColors.redE80000),
+                                  valueColor: AlwaysStoppedAnimation(
+                                      FFColors.redE80000),
                                 )
                               : Text(
                                   'Buy Premium \$0.99',

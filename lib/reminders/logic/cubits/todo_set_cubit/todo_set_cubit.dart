@@ -5,29 +5,30 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'todo_set_cubit.freezed.dart';
 
-class SetTodoCubit extends Cubit<SetTodoState> {
-  SetTodoCubit(this.todoRepo) : super(const SetTodoState.initial());
-  final TodoRepo todoRepo;
+class SetTodoCubitPklancac extends Cubit<SetTodoStateMknsa> {
+  SetTodoCubitPklancac(this.todoRepoQvsv)
+      : super(const SetTodoStateMknsa.initial());
+  final TodoRepoQvsv todoRepoQvsv;
 
   setTodo(TodoHiveModel todoHiveModel) async {
-    emit(const SetTodoState.loading());
+    emit(const SetTodoStateMknsa.loading());
     try {
-      await todoRepo.setTodo(todoHiveModel);
-      emit(const SetTodoState.success());
+      await todoRepoQvsv.setTodo(todoHiveModel);
+      emit(const SetTodoStateMknsa.success());
     } catch (e) {
-      emit(SetTodoState.error(e.toString()));
+      emit(SetTodoStateMknsa.error(e.toString()));
     }
   }
 }
 
 @freezed
-class SetTodoState with _$SetTodoState {
-  const factory SetTodoState.initial() = _Initial;
-  const factory SetTodoState.loading() = _Loading;
-  const factory SetTodoState.error(String error) = _Error;
-  const factory SetTodoState.success() = _Success;
+class SetTodoStateMknsa with _$SetTodoStateMknsa {
+  const factory SetTodoStateMknsa.initial() = _Initial;
+  const factory SetTodoStateMknsa.loading() = _Loading;
+  const factory SetTodoStateMknsa.error(String error) = _Error;
+  const factory SetTodoStateMknsa.success() = _Success;
 
-  const SetTodoState._();
+  const SetTodoStateMknsa._();
   bool get isLoading => maybeWhen(
         orElse: () => false,
         loading: () => true,

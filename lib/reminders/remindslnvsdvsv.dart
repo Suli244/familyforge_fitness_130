@@ -34,7 +34,7 @@ class _RemindersScreenState extends State<RemindersScreen> {
   @override
   void initState() {
     _selectedDate = DateTime(now.year, now.month, now.day, 0, 0, 0, 0);
-     context.read<GetTodoCubit>().getTodo();
+    context.read<GetTodoCubitIhcnajcasc>().getTodo();
     super.initState();
   }
 
@@ -277,7 +277,7 @@ class _RemindersScreenState extends State<RemindersScreen> {
                                             event as CustomEvent;
                                         return Align(
                                           alignment: Alignment.bottomCenter,
-                                          child: Container(
+                                          child: Container(margin: EdgeInsets.only(right: 1.r),
                                             decoration: BoxDecoration(
                                                 color: customEvent.color,
                                                 borderRadius:
@@ -615,75 +615,75 @@ class _RemindersScreenState extends State<RemindersScreen> {
                         },
                       ),
                     )
-                  : BlocBuilder<GetTodoCubit, GetTodoState>(
-                    builder: (context, state) {
-                      return state.maybeWhen(
-                        orElse: () => const Center(
-                            child: CircularProgressIndicator()),
-                        success: (model) {
-                          return model.isNotEmpty
-                              ? ListView.separated(
-                                  physics:
-                                      const NeverScrollableScrollPhysics(),
-                                  shrinkWrap: true,
-                                  itemBuilder: (context, index) {
-                                    return Padding(
-                                      padding: EdgeInsets.only(
-                                          top: index == 0 ? 16.r : 0,
-                                          bottom: index == model.length - 1
-                                              ? 100.r
-                                              : 0),
-                                      child: TodoWidget(
-                                        model: model[index],
-                                      ),
-                                    );
-                                  },
-                                  separatorBuilder: (_, i) =>
-                                      SizedBox(height: 7.r),
-                                  itemCount: model.length,
-                                )
-                              : Padding(
-                                  padding: EdgeInsets.only(top: 150.r),
-                                  child: Center(
-                                    child: Text(
-                                      'No tasks for selected date',
-                                      style: TextStyle(
-                                        fontSize: 16.h,
-                                        fontWeight: FontWeight.w500,
-                                        color:
-                                            FFColors.whate.withOpacity(0.5),
+                  : BlocBuilder<GetTodoCubitIhcnajcasc, GetTodoStateQocjamsc>(
+                      builder: (context, state) {
+                        return state.maybeWhen(
+                          orElse: () =>
+                              const Center(child: CircularProgressIndicator()),
+                          success: (model) {
+                            return model.isNotEmpty
+                                ? ListView.separated(
+                                    physics:
+                                        const NeverScrollableScrollPhysics(),
+                                    shrinkWrap: true,
+                                    itemBuilder: (context, index) {
+                                      return Padding(
+                                        padding: EdgeInsets.only(
+                                            top: index == 0 ? 16.r : 0,
+                                            bottom: index == model.length - 1
+                                                ? 100.r
+                                                : 0),
+                                        child: TodoWidgetojbcsascasc(
+                                          model: model[index],
+                                        ),
+                                      );
+                                    },
+                                    separatorBuilder: (_, i) =>
+                                        SizedBox(height: 7.r),
+                                    itemCount: model.length,
+                                  )
+                                : Padding(
+                                    padding: EdgeInsets.only(top: 150.r),
+                                    child: Center(
+                                      child: Text(
+                                        'No tasks for selected date',
+                                        style: TextStyle(
+                                          fontSize: 16.h,
+                                          fontWeight: FontWeight.w500,
+                                          color:
+                                              FFColors.whate.withOpacity(0.5),
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                );
-                        },
-                      );
-                    },
-                  ),
+                                  );
+                          },
+                        );
+                      },
+                    ),
             ],
           ),
         ),
       ),
       floatingActionButton: _selectedIndex == 1
           ? FFMotion(
-            onPressed: () async {
-              await showModalBottomSheet(
-                context: context,
-                isScrollControlled: true,
-                builder: (BuildContext context) {
-                  return const AddNote();
-                },
-              );
-              context.read<GetTodoCubit>().getTodo();
-            },
-            child: Container(
-              height: 56.h,
-              width: 56.w,
-              decoration: const BoxDecoration(
-                  shape: BoxShape.circle, color: FFColors.redE80000),
-              child: Icon(Icons.add, color: FFColors.whate, size: 24.r),
-            ),
-          )
+              onPressed: () async {
+                await showModalBottomSheet(
+                  context: context,
+                  isScrollControlled: true,
+                  builder: (BuildContext context) {
+                    return const AddNote();
+                  },
+                );
+                context.read<GetTodoCubitIhcnajcasc>().getTodo();
+              },
+              child: Container(
+                height: 56.h,
+                width: 56.w,
+                decoration: const BoxDecoration(
+                    shape: BoxShape.circle, color: FFColors.redE80000),
+                child: Icon(Icons.add, color: FFColors.whate, size: 24.r),
+              ),
+            )
           : const SizedBox(),
     );
   }

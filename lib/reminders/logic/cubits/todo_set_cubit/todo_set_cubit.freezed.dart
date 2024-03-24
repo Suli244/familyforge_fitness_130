@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$SetTodoState {
+mixin _$SetTodoStateMknsa {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -69,16 +69,16 @@ mixin _$SetTodoState {
 }
 
 /// @nodoc
-abstract class $SetTodoStateCopyWith<$Res> {
-  factory $SetTodoStateCopyWith(
-          SetTodoState value, $Res Function(SetTodoState) then) =
-      _$SetTodoStateCopyWithImpl<$Res, SetTodoState>;
+abstract class $SetTodoStateMknsaCopyWith<$Res> {
+  factory $SetTodoStateMknsaCopyWith(
+          SetTodoStateMknsa value, $Res Function(SetTodoStateMknsa) then) =
+      _$SetTodoStateMknsaCopyWithImpl<$Res, SetTodoStateMknsa>;
 }
 
 /// @nodoc
-class _$SetTodoStateCopyWithImpl<$Res, $Val extends SetTodoState>
-    implements $SetTodoStateCopyWith<$Res> {
-  _$SetTodoStateCopyWithImpl(this._value, this._then);
+class _$SetTodoStateMknsaCopyWithImpl<$Res, $Val extends SetTodoStateMknsa>
+    implements $SetTodoStateMknsaCopyWith<$Res> {
+  _$SetTodoStateMknsaCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -95,7 +95,7 @@ abstract class _$$_InitialCopyWith<$Res> {
 
 /// @nodoc
 class __$$_InitialCopyWithImpl<$Res>
-    extends _$SetTodoStateCopyWithImpl<$Res, _$_Initial>
+    extends _$SetTodoStateMknsaCopyWithImpl<$Res, _$_Initial>
     implements _$$_InitialCopyWith<$Res> {
   __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
       : super(_value, _then);
@@ -108,7 +108,7 @@ class _$_Initial extends _Initial {
 
   @override
   String toString() {
-    return 'SetTodoState.initial()';
+    return 'SetTodoStateMknsa.initial()';
   }
 
   @override
@@ -195,7 +195,7 @@ class _$_Initial extends _Initial {
   }
 }
 
-abstract class _Initial extends SetTodoState {
+abstract class _Initial extends SetTodoStateMknsa {
   const factory _Initial() = _$_Initial;
   const _Initial._() : super._();
 }
@@ -209,7 +209,7 @@ abstract class _$$_LoadingCopyWith<$Res> {
 
 /// @nodoc
 class __$$_LoadingCopyWithImpl<$Res>
-    extends _$SetTodoStateCopyWithImpl<$Res, _$_Loading>
+    extends _$SetTodoStateMknsaCopyWithImpl<$Res, _$_Loading>
     implements _$$_LoadingCopyWith<$Res> {
   __$$_LoadingCopyWithImpl(_$_Loading _value, $Res Function(_$_Loading) _then)
       : super(_value, _then);
@@ -222,7 +222,7 @@ class _$_Loading extends _Loading {
 
   @override
   String toString() {
-    return 'SetTodoState.loading()';
+    return 'SetTodoStateMknsa.loading()';
   }
 
   @override
@@ -309,7 +309,7 @@ class _$_Loading extends _Loading {
   }
 }
 
-abstract class _Loading extends SetTodoState {
+abstract class _Loading extends SetTodoStateMknsa {
   const factory _Loading() = _$_Loading;
   const _Loading._() : super._();
 }
@@ -324,7 +324,7 @@ abstract class _$$_ErrorCopyWith<$Res> {
 
 /// @nodoc
 class __$$_ErrorCopyWithImpl<$Res>
-    extends _$SetTodoStateCopyWithImpl<$Res, _$_Error>
+    extends _$SetTodoStateMknsaCopyWithImpl<$Res, _$_Error>
     implements _$$_ErrorCopyWith<$Res> {
   __$$_ErrorCopyWithImpl(_$_Error _value, $Res Function(_$_Error) _then)
       : super(_value, _then);
@@ -353,7 +353,7 @@ class _$_Error extends _Error {
 
   @override
   String toString() {
-    return 'SetTodoState.error(error: $error)';
+    return 'SetTodoStateMknsa.error(error: $error)';
   }
 
   @override
@@ -448,7 +448,7 @@ class _$_Error extends _Error {
   }
 }
 
-abstract class _Error extends SetTodoState {
+abstract class _Error extends SetTodoStateMknsa {
   const factory _Error(final String error) = _$_Error;
   const _Error._() : super._();
 
@@ -467,7 +467,7 @@ abstract class _$$_SuccessCopyWith<$Res> {
 
 /// @nodoc
 class __$$_SuccessCopyWithImpl<$Res>
-    extends _$SetTodoStateCopyWithImpl<$Res, _$_Success>
+    extends _$SetTodoStateMknsaCopyWithImpl<$Res, _$_Success>
     implements _$$_SuccessCopyWith<$Res> {
   __$$_SuccessCopyWithImpl(_$_Success _value, $Res Function(_$_Success) _then)
       : super(_value, _then);
@@ -480,7 +480,7 @@ class _$_Success extends _Success {
 
   @override
   String toString() {
-    return 'SetTodoState.success()';
+    return 'SetTodoStateMknsa.success()';
   }
 
   @override
@@ -567,7 +567,7 @@ class _$_Success extends _Success {
   }
 }
 
-abstract class _Success extends SetTodoState {
+abstract class _Success extends SetTodoStateMknsa {
   const factory _Success() = _$_Success;
   const _Success._() : super._();
 }

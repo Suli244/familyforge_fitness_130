@@ -6,14 +6,14 @@ import 'package:familyforge_fitness_130/training/widgets/trn_wdgt.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class TrainingScreen extends StatefulWidget {
-  const TrainingScreen({super.key});
+class TrainingScreenqfsvsd extends StatefulWidget {
+  const TrainingScreenqfsvsd({super.key});
 
   @override
-  State<TrainingScreen> createState() => _TrainingScreenState();
+  State<TrainingScreenqfsvsd> createState() => _TrainingScreenqfsvsdState();
 }
 
-class _TrainingScreenState extends State<TrainingScreen> {
+class _TrainingScreenqfsvsdState extends State<TrainingScreenqfsvsd> {
   String page = 'For Parents';
   @override
   Widget build(BuildContext context) {

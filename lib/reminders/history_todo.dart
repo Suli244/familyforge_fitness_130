@@ -38,14 +38,14 @@ class _HistoryTodoState extends State<HistoryTodo> {
       setState(() {
         selectedDate = picked;
       });
-      context.read<GetTodoCubit>().getTodo();
+      context.read<GetTodoCubitIhcnajcasc>().getTodo();
     }
   }
 
   @override
   void initState() {
     super.initState();
-    context.read<GetTodoCubit>().getTodo();
+    context.read<GetTodoCubitIhcnajcasc>().getTodo();
   }
 
   @override
@@ -65,29 +65,32 @@ class _HistoryTodoState extends State<HistoryTodo> {
       ),
       body: SafeArea(
         child: Padding(
-          padding:  EdgeInsets.symmetric(horizontal: 20.r),
+          padding: EdgeInsets.symmetric(horizontal: 20.r),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 20.h),
-                BlocBuilder<GetTodoCubit, GetTodoState>(
+                BlocBuilder<GetTodoCubitIhcnajcasc, GetTodoStateQocjamsc>(
                   builder: (context, state) {
                     return state.maybeWhen(
-                      orElse: () => const Center(child: CircularProgressIndicator()),
+                      orElse: () =>
+                          const Center(child: CircularProgressIndicator()),
                       success: (model) {
-                        modelNow = model.where((e) => e.isActive == true).toList();
-            
+                        modelNow =
+                            model.where((e) => e.isActive == true).toList();
+
                         return modelNow.isNotEmpty
                             ? ListView.separated(
                                 physics: const NeverScrollableScrollPhysics(),
                                 shrinkWrap: true,
                                 itemBuilder: (context, index) {
-                                  return TodoWidget(
+                                  return TodoWidgetojbcsascasc(
                                     model: modelNow[index],
                                   );
                                 },
-                                separatorBuilder: (_, i) => SizedBox(height: 7.r),
+                                separatorBuilder: (_, i) =>
+                                    SizedBox(height: 7.r),
                                 itemCount: modelNow.length,
                               )
                             : Padding(
