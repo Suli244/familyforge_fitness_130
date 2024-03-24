@@ -182,7 +182,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
                           child: trbbbdb
                               ? const CircularProgressIndicator(
                                   valueColor:
-                                      AlwaysStoppedAnimation(Colors.white),
+                                      AlwaysStoppedAnimation(FFColors.redE80000),
                                 )
                               : Text(
                                   'Buy Premium \$0.99',

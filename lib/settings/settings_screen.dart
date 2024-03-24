@@ -107,7 +107,7 @@ class SettingsScreen extends StatelessWidget {
               imagSvg: 'assets/icons/shap_icon.svg',
               text: 'Share App',
               onPressed: () {
-                Share.share('Hello');
+                Share.share('https://apps.apple.com/us/app/fff-familyforge-fitness/id6479637570');
               },
             ),
           ],

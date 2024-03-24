@@ -5,6 +5,7 @@ import 'package:familyforge_fitness_130/reminders/logic/model/reminders_hive_mod
 import 'package:familyforge_fitness_130/reminders/logic/model/todo_hive_model.dart';
 import 'package:familyforge_fitness_130/reminders/logic/repositories/remindsvmskvsdvds.dart';
 import 'package:familyforge_fitness_130/reminders/logic/repositories/todo_repo.dart';
+import 'package:familyforge_fitness_130/settings/familyforge_fitness_adadpad.dart';
 import 'package:familyforge_fitness_130/splash/ssaplaaash_sacnacacs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,6 +14,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await FamilyforgeFitnessAdapty().initializeFamilyforgeFitnessAdapty();
   await Hive.initFlutter();
   Hive.registerAdapter(RemcskcnsdcHHHAdapter());
   Hive.registerAdapter(TodoHiveModelAdapter());

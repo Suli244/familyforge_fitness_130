@@ -24,7 +24,7 @@ class _OnbordingState extends State<Onbording> {
       body: Stack(
         children: [
           Positioned(
-            top: 0,
+            top: 10,
             left: 0,
             right: 0,
             bottom: 100,
